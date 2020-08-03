@@ -49,6 +49,28 @@
     "slug": "kernel"
   },
   {
+    "title": "【エンジニア】1年で転職は失敗する？採用側の意見を言います！",
+    "description": "「ただ1年単位での転職を繰り返せば無条件でスキルアップ・収入アップできる」という考え方に対して疑問を投げかけます。",
+    "created": 1554303600000,
+    "tags": [
+      "キャリアパス",
+      "採用"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2019/04/e3c9ef1475f2fa1aec947589789bcf82.png",
+    "slug": "changing-jobs"
+  },
+  {
+    "title": "良いエンジニアを採用するための面接のやり方",
+    "description": "「ただ1年単位での転職を繰り返せば無条件でスキルアップ・収入アップできる」という考え方に対して疑問を投げかけます。",
+    "created": 1554303600000,
+    "tags": [
+      "キャリアパス",
+      "採用"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2019/04/e3c9ef1475f2fa1aec947589789bcf82.png",
+    "slug": "engineer-interview"
+  },
+  {
     "title": "【Rails】ActiveRecordの:dependent使い分けまとめ【:destroy, :delete, :nullify】",
     "description": "身体を動かすために使われるエネルギーをATPと言います。この記事では、現代人が失いがちなATPの補充方法について説明します。",
     "created": 1534464000000,
