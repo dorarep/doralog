@@ -1,0 +1,117 @@
+---
+title: "【Rails】ActiveRecordの:dependent使い分けまとめ【:destroy, :delete, :nullify】"
+description: 身体を動かすために使われるエネルギーをATPと言います。この記事では、現代人が失いがちなATPの補充方法について説明します。
+created: 1534464000000
+tags: [Rails, Ruby, ActiveRecord]
+thumbnail: https://storage.googleapis.com/stacky-health/2018/08/RubyOnRailsDependent.jpg
+---
+
+# ActiveRecordのdependentオプションとは
+
+dependentオプションとは、モデルが削除されるときの、関係づけされたモデルに対する挙動を定義するものです。
+
+たとえばこちらのコードの場合、Heroオブジェクトが削除されたときの、Weaponオブジェクトに対する挙動を定義しています。
+
+<CodeBlock lang="ruby" code="class Hero < ApplicationRecord
+  has_one :weapon, dependent: :nullify
+end" />
+
+dependentで設定できる値は、大きく分けて4つあります。
+
+## dependent: destroy
+
+こちらを指定すると、_削除時に指定したモデルに対して`destroy`が実行される_ようになります。
+
+<CodeBlock lang="ruby" code="class Hero < ApplicationRecord
+  has_one :weapon, dependent: :destroy
+end" />
+
+たとえばこのコードの場合、Heroモデルが削除されたら、Weaponモデルに対して`destroy`が実行されるわけです。
+
+<CodeBlock lang="ruby" code="Weapon.destroy # これと同じ処理が実行される。" />
+
+`destroy`が実行されるので、それに関連した処理も逐次実行されていくことになります。
+
+`before_destroy`など`destroy`に対するフックが実行されますし、孫クラスにも`dependent :destroy`があれば、孫クラスも合わせて削除されます。
+
+それは反面、実行すべき処理が多いというデメリットでもあります。
+
+クエリだけ見ても最初にSELECTが実行され、`has_many`の場合は意識しないと1個1個SELECTされてしまうのが欠点ですね。
+
+```
+pry(main)> hero.destroy (0.2ms)
+BEGIN Weapon Load (0.4ms) SELECT `weapons`.* FROM `weapons` WHERE `weapons`.`id` = 1 LIMIT 1
+# Weapon::before_destroyが実行されました。
+SQL (0.4ms) DELETE FROM `weapons` WHERE `weapons`.`id` = 1
+```
+
+## 使うタイミング
+
+- 削除時に、指定したモデルのレコードも削除したい。（レコード数が増えると困る）
+- before_destroyや、孫クラスのdependentなど、destroyに関連したフックを実行したい。
+- 速度・サーバ負荷が気にならない
+
+# dependent: delete / delete_all
+
+`belongs_to`, `has_one`の場合は`:delete`、`has_many`の場合は`:delete_all`となります。
+
+`delete`か`delete_all`を指定すると、削除時に指定したモデルに対してDELETEクエリが直接実行されます。
+
+<CodeBlock lang="ruby" code="Weapon.delete # これと同じ処理が実行される。" />
+
+DBからレコードを削除するという必要最低限の処理のみが行われるため、`destroy`と比較して処理が早いです。
+
+また関連した処理も実行されないため、`before_destroy`が実行されると困る場合などでも使えるかもしれません。
+
+## 使うタイミング
+
+- 削除時に、指定したモデルのレコードも削除したい。（レコード数が増えると困る）
+- `before_destroy`や、孫クラスの`dependent`など、`destroy`に関連したフックを実行したくない。
+- 速度・サーバ負荷が気になる。
+
+# dependent: nullify
+
+`nullify`を指定すると、削除時に指定したモデルの外部キーに`null`が入れられます。
+
+<CodeBlock lang="ruby" code="class Hero < ApplicationRecord
+  has_one :weapon, dependent: :nullify
+end" />
+
+こちらのコードの場合、Weaponsテーブルの該当レコードにおける、`hero_id`の値が`NULL`に`UPDATE`されるわけですね。
+
+削除されることはないため、残ったレコードは永遠に残り続けることになります。
+
+したがって、いずれテーブル内の無駄なレコードを整理する必要が出てくることは想定しておきましょう。
+
+またクエリだけ見ると、`UPDATE`のみなので`DELETE`より負荷は軽いです。
+
+## 使うタイミング
+
+- 削除されたレコードは残しておきたいが、参照先のない外部キーは防ぎたい。
+- レコードが増え続けても問題がない、もしくは深夜バッチなど自分のタイミングで削除を行いたい。
+- `DELETE`する負荷に耐えられない。
+
+# dependent: restrict_with_exception / restrict_with_error
+
+削除時に関連づけられたレコードが存在するときに、例外やエラーを発生させます。
+
+|  |  |
+|-------------------------|-----------------------------------------------------|
+| restrict_with_exception | 例外を発生させる。<br />（`DeleteRestrictionError`がraiseする） |
+| restrict_with_error     | エラーとなる。<br />（`ActiveRecord`のerrorとして扱われる）      |
+
+ですのでシンプルに子要素があるときに削除されては困る場合に使うことになるでしょう。
+
+たとえば「写真が存在するアルバムなので削除できません」とエラーメッセージを出したいときなどですね。
+
+## 使うタイミング
+
+- 関連づけられたレコードがあるときに削除されたら困る。
+
+# まとめ：ActiveRecordのdependentオプションとは
+
+`ActiveRecord`のdependentオプションについて説明していきました。
+
+`dependent`で削除時の挙動を指定するということは、`dependent`を設定しないと子要素に対しては何もされないということでもあります。
+
+削除時に何か実行したい処理がある場合は、忘れずに設定するようにしましょう！

@@ -5,14 +5,13 @@ export const Header = () => (
     <header>
       <div className='container'>
         <a href='/'>{ssgConfig.siteName}</a>
-        <span>-健康をクリエイトするための挑戦記-</span>
       </div>
     </header>
     <style jsx>{`
       header {
         width: 100%;
         height: 100%;
-        background-color: var(--main-color);
+        background-color: var(--dark-main-color);
         box-shadow: var(--shadow);
       }
       .container {
