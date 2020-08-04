@@ -1,5 +1,18 @@
 [
   {
+    "title": "OKRがうまくいかない？運用方法とアンチパターンを解説！",
+    "description": "OKRは、目標の設定・管理システムの１つです。この記事ではOKRのコンセプトを見つめ直し、それを踏まえアンチパターンとその対処法をまとめていきまsづ。",
+    "created": 1577232000000,
+    "tags": [
+      "組織",
+      "OKR",
+      "目標設定",
+      "評価"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2019/12/okr.png",
+    "slug": "okr"
+  },
+  {
     "title": "Node.jsの構造や仕組みは？【普及した理由】",
     "description": "Node.jsは、GoogleがChromeのために開発したV8エンジンを利用したJavaScriptの実行環境です。V8エンジンはいきなりJavaScriptを直接マシン語にコンパイルし、プログラムを実行することで、高速な実行を可能にしました。",
     "created": 1577059200000,
@@ -24,6 +37,18 @@
     ],
     "thumbnail": "https://storage.googleapis.com/stacky-health/2019/12/72a00cd568035ab1be8943367978e58c.png",
     "slug": "javascript-history"
+  },
+  {
+    "title": "マネージャーは結局、なにをする人なのか",
+    "description": "マネージャーって結局、なにをする人なのでしょうか。その曖昧性からマネージャー不要論なども出ている現在ですので、改めてその役割について考えていきたいと思います。",
+    "created": 1562668380000,
+    "tags": [
+      "マネジメント",
+      "心理的安全性",
+      "組織"
+    ],
+    "thumbnail": "/thumbnails/manager.png",
+    "slug": "manager"
   },
   {
     "title": "CUIとGUIとは？噛み砕いて解説します！【初心者向け】",
@@ -82,5 +107,56 @@
     ],
     "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/ac38ed05cc88df6cd0b7b3e45eb0828c.jpg",
     "slug": "engineer-interview"
+  },
+  {
+    "title": "行動を促すためのアイデンティティを活かした組織の作りかた",
+    "description": "アイデンティティをうまく扱うことで、チームメンバーにしてほしい行動を促すこともできるようになります。人々の行動を左右するアイデンティティと、それを活かしたチームづくりについて書いていきます。",
+    "created": 1531666800000,
+    "tags": [
+      "アイデンティティ",
+      "組織"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/5ac31205f5096f37c8429cab318c93e3.jpg",
+    "slug": "identity"
+  },
+  {
+    "title": "MVP制度は悪影響？モチベーションを最大化する競争のデザイン",
+    "description": "競争が社員のモチベーションに悪影響を与えていることがあります。競争とモチベーションの関係性と、そこから見る最適な競争の作り方について記載していきます。",
+    "created": 1531666800000,
+    "tags": [
+      "モチベーション",
+      "MVP",
+      "競争",
+      "評価",
+      "組織"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/f895ba0c7dcce88dd4b8625ed2544148.jpg",
+    "slug": "motivate"
+  },
+  {
+    "title": "あなたが部下に任せられない理由とは？モチベーションの関係とあわせて解説",
+    "description": "マネージャーは下に仕事を任せる立場だ！なんて言うのは良く言われますが、なかなか任せられない人も多くいます。任せることとモチベーションの関係性と、あなたがなぜ任せられないのかを紐解いていきます。",
+    "created": 1531494000000,
+    "tags": [
+      "モチベーション",
+      "マネジメント",
+      "承認",
+      "権限移譲"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/18e9ef6d6f05034fa84d98d2a59f187e.jpg",
+    "slug": "empowerment"
+  },
+  {
+    "title": "仕事における情報収集の方法とは？インターネットを漁るだけでは出世できない理由",
+    "description": "競争が社員のモチベーションに悪影響を与えていることがあります。競争とモチベーションの関係性と、そこから見る最適な競争の作り方について記載していきます。",
+    "created": 1483714800000,
+    "tags": [
+      "モチベーション",
+      "マネジメント",
+      "承認",
+      "権限移譲"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/09/9bf6138549f3f767d1ecb3ca68cd111f.jpg",
+    "slug": "information-gathering"
   }
 ]
