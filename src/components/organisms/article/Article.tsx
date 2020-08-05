@@ -19,18 +19,22 @@ export const Article: FC<Props> = ({
   <>
     <article>
       <Time date={new Date(created)} />
-      <div>{tags.map(tag => (<Tag key={tag}>{tag}</Tag>))}</div>
+      <div className="tags">{tags.map(tag => (<Tag key={tag}>{tag}</Tag>))}</div>
       <h1>{title}</h1>
       {thumbnail && <amp-img alt="thumbnail" layout="intrinsic" width='1120' height='630' src={thumbnail} />}
       {children}
-      <div>{tags.map(tag => (<Tag key={tag}>{tag}</Tag>))}</div>
+      <div className="tags">{tags.map(tag => (<Tag key={tag}>{tag}</Tag>))}</div>
     </article>
     <style jsx>{`
         article {
-          width: 100%:
+          width: 100vw:
           max-width: 900px;
           background-color: white;
           padding: 1rem;
+        }
+        .tags {
+          display: flex;
+          flex-wrap: wrap;
         }
         h1 {
           font-size: 1.5rem;
