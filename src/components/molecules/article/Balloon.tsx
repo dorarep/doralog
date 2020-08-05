@@ -23,7 +23,7 @@ const Balloon: FC<Props> = ({ img, direction = 'left', children }) => {
         .chat {
           display: grid;
           width: 100%;
-          margin-bottom: 1rem;
+          margin: 1rem 0;
         }
         .right {
           grid-template-columns: 1fr 90px;

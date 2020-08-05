@@ -1,5 +1,11 @@
 [
   {
+    "date": "Thu Aug 6 00:39:34 2020 +0900",
+    "hash": "1f90547",
+    "author": "dorarep",
+    "message": "feat: add balloon component and article"
+  },
+  {
     "date": "Mon Aug 3 10:46:19 2020 +0900",
     "hash": "0270895",
     "author": "dorarep",

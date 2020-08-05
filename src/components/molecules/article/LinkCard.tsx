@@ -1,16 +1,16 @@
 import {FC} from "react";
-import pages from "../../../../gen/pages.json";
+import links from "../../../../master/links.json";
 
 type Props = {
   slug: string;
 }
 
 const Amazon: FC<Props> = ({ slug }) => {
-  const article = pages.find(page => page.slug === slug);
+  const article = links[slug];
 
   return (
     <>
-      <a className="card" href={`/articles/${slug}`} target="_blank">
+      <a className="card" href={article.url} target="_blank">
         <amp-img layout="responsive" alt={article.title} width='560' height='315' src={article.thumbnail} />
         <div className="body">
           <span className="label">関連記事</span>

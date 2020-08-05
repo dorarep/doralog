@@ -1,7 +1,7 @@
 [
   {
     "title": "OKRがうまくいかない？運用方法とアンチパターンを解説！",
-    "description": "OKRは、目標の設定・管理システムの１つです。この記事ではOKRのコンセプトを見つめ直し、それを踏まえアンチパターンとその対処法をまとめていきまsづ。",
+    "description": "OKRは、目標の設定・管理システムの１つです。この記事ではOKRのコンセプトを見つめ直し、それを踏まえアンチパターンとその対処法をまとめていきます。",
     "created": 1577232000000,
     "tags": [
       "組織",
@@ -74,16 +74,6 @@
     "slug": "kernel"
   },
   {
-    "title": "リモートワークはつらいので辞めました！【半年やった感想】",
-    "description": "リモートワークを半年間やってきて、なにが辛かったか、私が抱いた印象を振り返っていきます。",
-    "created": 1559919600000,
-    "tags": [
-      "リモーtーワーク"
-    ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2019/01/ab09d74b05db94c9df011e75a5457c45.png",
-    "slug": "remote-work"
-  },
-  {
     "title": "【エンジニア】1年で転職は失敗する？採用側の意見を言います！",
     "description": "「ただ1年単位での転職を繰り返せば無条件でスキルアップ・収入アップできる」という考え方に対して疑問を投げかけます。",
     "created": 1554303600000,
@@ -93,6 +83,17 @@
     ],
     "thumbnail": "https://storage.googleapis.com/stacky-health/2019/04/e3c9ef1475f2fa1aec947589789bcf82.png",
     "slug": "changing-jobs"
+  },
+  {
+    "title": "リモートワークはつらいので辞めました！【半年やった感想】",
+    "description": "リモートワークを半年間やってきて、なにが辛かったか、私が抱いた印象を振り返っていきます。",
+    "created": 1546095600000,
+    "tags": [
+      "リモートワーク",
+      "モチベーション"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2019/01/ab09d74b05db94c9df011e75a5457c45.png",
+    "slug": "remote-work"
   },
   {
     "title": "【Rails】ActiveRecordの:dependent使い分けまとめ【:destroy, :delete, :nullify】",
@@ -117,6 +118,46 @@
     ],
     "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/ac38ed05cc88df6cd0b7b3e45eb0828c.jpg",
     "slug": "engineer-interview"
+  },
+  {
+    "title": "なんで意見が食い違うの？あなたの思い込みが論理的思考を腐らせる",
+    "description": "論理的思考をしてもなぜ争うのか、認知の歪みの観点から説明していきます。",
+    "created": 1532271600000,
+    "tags": [
+      "感情",
+      "認知の歪み",
+      "論理的思考"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/979397f17a4bf30c7a79cd172b832341.jpg",
+    "slug": "cognitive-distortion"
+  },
+  {
+    "title": "プレゼンを圧倒的に上手くする方法　ストーリーテリング",
+    "description": "口下手を発表上手に変えるストーリーテリングの技法を今回は紹介します。",
+    "created": 1531926000000,
+    "tags": [
+      "ストーリーテリング",
+      "プレゼン",
+      "心理"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/story_telling.jpg",
+    "slug": "storytelling"
+  },
+  {
+    "title": "なぜ報告しないんだ！？心理的安全性を確保する組織の作り方",
+    "description": "心理的安全性とは、「対人リスクをとっても問題ないという信念がチームで共有されている状態」のことです。心理的安全性を確保する組織の作り方について説明します。",
+    "created": 1531839600000,
+    "tags": [
+      "組織",
+      "心理的安全性",
+      "ストーリーテリング",
+      "アイデンティティ",
+      "マネジメント",
+      "ティール組織",
+      "心理"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/917360ad6fa7841d1ef08d2fdcbc4b75.jpg",
+    "slug": "psychological-safety"
   },
   {
     "title": "行動を促すためのアイデンティティを活かした組織の作りかた",
