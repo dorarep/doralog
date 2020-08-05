@@ -156,7 +156,7 @@ export const Body: FC = ({ children }) => (
       }
       :root {
         --dark-main-color: #051E34
-        --main-color: #5CADAD
+        --main-color: #407979
         --light-main-color: #E4F1EF
         --font-color: #414042
         --background-color: #F7F6F5
