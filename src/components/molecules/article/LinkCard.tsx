@@ -10,7 +10,7 @@ const Amazon: FC<Props> = ({ slug }) => {
 
   return (
     <>
-      <a className="card" href={article.url} target="_blank">
+      <a className="card" href={article.url} rel="noopener" target="_blank">
         <amp-img layout="responsive" alt={article.title} width='560' height='315' src={article.thumbnail} />
         <div className="body">
           <span className="label">関連記事</span>
