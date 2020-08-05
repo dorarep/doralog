@@ -87,6 +87,7 @@ export const Article: FC<Props> = ({
           background: var(--light-gray);
           color: var(--dark-gray);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+          overflow-x: scroll;
         }
         blockquote p {
           padding: 0;
@@ -131,6 +132,10 @@ export const Article: FC<Props> = ({
           padding: 0;
           width: 100%;
           table-layout: fixed;
+          display: block;
+          overflow-x: scroll;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
         }
         table tr {
           background-color: var(--background-color);
