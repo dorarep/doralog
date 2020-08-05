@@ -48,8 +48,8 @@ export const Article: FC<Props> = ({
           padding-bottom: 16px;
           margin-top: 3rem;
           margin-bottom: 2rem;
-          background-color: var(--light-main-color);
-          border-left: 5px solid var(--main-color);
+          background-color: var(--light-gray);
+          border-left: 5px solid var(--dark-main-color);
           border-radius: 2px;
           font-weight: 400;
           letter-spacing: 0;
@@ -61,7 +61,7 @@ export const Article: FC<Props> = ({
           padding-top: 0;
           margin-top: 3rem;
           margin-bottom: 2rem;
-          border-bottom: 3px solid var(--main-color);
+          border-bottom: 3px solid var(--dark-main-color);
           font-weight: 400;
           letter-spacing: 0;
         }
@@ -71,7 +71,7 @@ export const Article: FC<Props> = ({
           padding: 2px 12px;
           margin-top: 3rem;
           margin-bottom: 2rem;
-          border-left: 2px solid var(--main-color);
+          border-left: 2px solid var(--dark-main-color);
         }
         blockquote {
           margin-left: 0;
@@ -97,13 +97,13 @@ export const Article: FC<Props> = ({
         em {
           font-weight: bold;
           font-style: normal;
-          background: linear-gradient(transparent 60%, var(--light-highlight-color) 60%);
+          background: linear-gradient(transparent 60%, var(--highlight-color) 60%);
         }
         strong {
-          background: linear-gradient(transparent 60%, var(--light-highlight-color) 60%);
+          background: linear-gradient(transparent 60%, var(--highlight-color) 60%);
         }
         ul, ol {
-          border: dashed 2px var(--highlight-color);
+          border: dashed 2px var(--dark-highlight-color);
           background: var(--light-highlight-color);
           padding: 0.5em 0.5em 0.5em 2em;
           margin-top: 2rem;
@@ -115,7 +115,7 @@ export const Article: FC<Props> = ({
         }
         .highlight-box {
           border-radius: 5px;
-          border: solid 2px var(--highlight-color);
+          border: solid 2px var(--dark-highlight-color);
           background-color: var(--light-highlight-color);
           font-weight: bold;
           padding: 1rem;
@@ -141,7 +141,7 @@ export const Article: FC<Props> = ({
           font-size: .85em;
         }
         table thead tr{
-          background-color: var(--main-color);
+          background-color: var(--dark-main-color);
           color:#fff;
         }
       `}</style>

@@ -8,7 +8,6 @@ import {Article} from "../../components/organisms/article/Article";
 import {Main} from "../../components/atoms/layouts/Main";
 import {Header} from "../../components/organisms/common/Header";
 import {Footer} from "../../components/organisms/common/Footer";
-import Amazon from '../../components/molecules/article/Amazon';
 
 type Props = {
   slug: string;

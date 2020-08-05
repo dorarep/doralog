@@ -13,7 +13,7 @@ export const LinkButton: FC<Props> = ({ href, children }) => (
         a {
           margin: 0 0.5rem 0.5rem 0;
           padding: 0.5rem;
-          background: var(--secondary-color);
+          background: var(--main-color);
           border-radius: 3px;
           color: #fff;
           font-weight: bold;

@@ -13,6 +13,7 @@ type Product = {
   kindleUrl?: string;
   rakutenUrl?: string;
   thumbnail?: string;
+  article?: string;
   width: string;
   height: string;
 }
@@ -30,6 +31,7 @@ const Amazon: FC<Props> = ({ productKey }) => {
             {product.amazonUrl && (<LinkButton href={product.amazonUrl}>Amazon</LinkButton>)}
             {product.kindleUrl && (<LinkButton href={product.kindleUrl}>Kindle</LinkButton>)}
             {product.rakutenUrl && (<LinkButton href={product.rakutenUrl}>楽天市場</LinkButton>)}
+            {product.article && (<LinkButton href={`/articles/${product.article}`}>読書感想文</LinkButton>)}
           </div>
         </div>
       </div>

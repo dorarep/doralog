@@ -16,7 +16,7 @@ export const TagName: FC<Props> = ({ tag, similarTags }) => (
       div {
         margin-bottom: 2rem;
         background-color: white;
-        border-top: 5px solid var(--main-color);
+        border-top: 5px solid var(--dark-main-color);
         padding: 1rem;
       }
       h1 {

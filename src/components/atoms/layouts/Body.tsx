@@ -161,9 +161,11 @@ export const Body: FC = ({ children }) => (
         --font-color: #414042
         --background-color: #F7F6F5
         --shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
-        --highlight-color: #FFB36B
-        --light-highlight-color: #FFF9E5
+        --dark-highlight-color: #ffa07a
+        --highlight-color: #fff7de
+        --light-highlight-color: #fffdf7
         --dark-gray: #515151
+        --gray: #c4c4c4
         --light-gray: #f5f5f5
         --light-secondary-color: #fff8f3
         --secondary-color: #ffc08d
