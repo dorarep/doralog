@@ -1,5 +1,17 @@
 [
   {
+    "title": "レスポンシブに異なる画像を提供するベストな方法【srcset】",
+    "description": "HTMLでレスポンシブに画像を指定する方法と、異なるサイズの画像を楽に用意する方法について説明していきます。",
+    "created": 1597599460910,
+    "tags": [
+      "フロントエンド",
+      "HTML",
+      "レスポンシブ対応"
+    ],
+    "thumbnail": "https://untraten.sirv.com/thumbnails/responsive-image-delivery.png",
+    "slug": "responsive-image-delivery"
+  },
+  {
     "title": "ホラクラシー組織は上下関係がない組織じゃない",
     "description": "ホラクラシー組織は上下関係がない組織という誤解を解いていきます。",
     "created": 1597552505603,

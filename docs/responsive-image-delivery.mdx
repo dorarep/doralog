@@ -1,0 +1,120 @@
+---
+title: "レスポンシブに異なる画像を提供するベストな方法【srcset】"
+description: HTMLでレスポンシブに画像を指定する方法と、異なるサイズの画像を楽に用意する方法について説明していきます。
+created: 1597599460910
+tags: [フロントエンド, HTML, レスポンシブ対応]
+thumbnail: https://untraten.sirv.com/thumbnails/responsive-image-delivery.png
+---
+
+レスポンシブ対応の大きな課題の1つが、「画像」です。
+小い画像を幅に合わせ引き伸ばすとぼやけてしまいますし、大きい画像を縮小するとページが重くなってしまいます。
+
+そのため今は端末の大きさに合わせ、3から5つの異なるサイズの画像を用意するのが一般的です。
+
+この記事では、_HTMLでレスポンシブに画像を指定する方法と、異なるサイズの画像を楽に用意する方法について説明していきます_。
+
+# HTMLでレスポンシブに画像を指定する方法
+
+HTMLの`<img>`タグで画像のソースを指定するためには、[`src`](https://developer.mozilla.org/ja/docs/Web/HTML/Element/img#attr-src)を使うのが一般的ですね。
+よくあるレスポンシブ対応としては、大きめの画像を`src`で指定して、画面幅に合わせてサイズを変える方法があります。
+
+```html
+<img src="thumbnail.png" width="100%" />
+```
+
+ですが、先に書いた通りこれだと常に大きいサイズの画像が配信されてしまい、通信量がかさんでしまいますよね。
+利便性はもちろん、[PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)のスコアも下がり、SEO面でもマイナスです。
+
+この問題は、[`srcset`](https://developer.mozilla.org/ja/docs/Web/HTML/Element/img#attr-srcset)属性を利用することで防ぐことができます。
+
+## `srcset`属性
+
+`srcset`は、複数の画像を指定できる属性です。
+
+`srcset`で指定された場合、ブラウザは必要なサイズの画像しかダウンロードしません。
+そのため、_通信量を抑えつつあらゆる端末に対応することができます_。
+
+### 記述方法
+
+`srcse`は、カンマ区切りで複数の画像と幅を指定します。
+幅は`px`単位ですが、`w`で指定します。
+
+たとえば次のような場合は、`thumbnail-s.jpg`が480px、`thumbnail-l.jpg`が1080pxです。
+
+```html
+<img
+    srcset="thumbnail-s.jpg 480w,
+            thumbnail-l.jpg 1080w"
+>
+```
+
+ブラウザが自動で最適なサイズの画像を選択してくれるので、記述する順番は気にしないでも大丈夫です。
+
+## `src`属性
+
+`src`属性は`srcset`と合わせて指定されている場合、ブラウザが`srcset`に対応していないときにのみ使われます。
+そのため_あらゆるデバイスで使えるように、`src`属性では一番大きな画像を指定しましょう_。
+
+```html
+<img
+    src="thumbnail-l.jpg"
+    srcset="thumbnail-s.jpg 480w,
+            thumbnail-m.jpg 860w,
+            thumbnail-l.jpg 1080w"
+>
+```
+
+# 異なるサイズの画像を楽に用意する方法
+
+1つの画像に対し複数の画像を用意する必要があります。
+ImageMagickなどを使って加工することも可能ですが、手間がかかりますし、後から異なるサイズに変えたいとき不便です。
+
+異なる大きさの画像を用意するための一番楽な方法は、画像処理CDNを使うことです。
+使い方によりますが、個人ブログ程度なら無料の範囲内でこれらのサービスを利用することができます。
+
+- [ImageFlux](https://www.sakura.ad.jp/services/imageflux/)
+- [Cloudinary](https://cloudinary.com/)
+- [imgix](https://www.imgix.com/)
+- [sirv](https://sirv.com/)
+- [imagekit](https://imagekit.io/)
+- [optimole](https://optimole.com/)
+- [piio](https://piio.co/)
+
+## URLパラメータでリアルタイム画像処理
+
+画像処理CDNは、様々な画像処理をリアルタイムで行ってくれます。
+
+- リサイズ
+- マスキング
+- クロッピング
+- フォーマットの変更
+- 文字の挿入
+
+たとえばこのブログで使っているsirvでは、次のように指定するだけで画像をリサイズしてくれます。
+
+```html
+<img
+    srcset="https://untraten.sirv.com/thumbnails/article001.png?w=480 480w,
+            https://untraten.sirv.com/thumbnails/article001.png?w=1080 1080w"
+>
+```
+
+URLパラメータで指定するだけなので、配信サイズを変更したい場合も指定を変えるだけで大丈夫です。
+
+```html
+<img
+    srcset="https://untraten.sirv.com/thumbnails/article001.png?w=120 120w,
+            https://untraten.sirv.com/thumbnails/article001.png?w=360 360w,
+            https://untraten.sirv.com/thumbnails/article001.png?w=900 900w"
+>
+```
+
+同様にwebpでの配信やブログタイトルの挿入なども、画像処理CDNによって自動化することができます。
+うまく使えば、画像関連の運用コストを大幅に下げることができます。
+
+# おわりに
+
+今はレスポンシブ対応のコストが下がり、楽に低コストで最適化ができるようになりました。
+楽に低コストでできるということは、知ってるかどうかで差が生まれやすいということでもあります。
+
+もっと良い方法があるよーという方は、[@dorarep](https://twitter.com/dorarep)まで教えていただけると幸いです！
