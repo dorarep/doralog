@@ -1,5 +1,18 @@
 [
   {
+    "title": "ホラクラシー組織は上下関係がない組織じゃない",
+    "description": "ホラクラシー組織は上下関係がない組織という誤解を解いていきます。",
+    "created": 1597552505603,
+    "tags": [
+      "エンジニア",
+      "組織",
+      "マネジメント",
+      "ホラクラシー組織"
+    ],
+    "thumbnail": "https://untraten.sirv.com/thumbnails/holacracy.png",
+    "slug": "holacracy"
+  },
+  {
     "title": "ティール組織はなぜ優れているのか",
     "description": "「ただ1年単位での転職を繰り返せば無条件でスキルアップ・収入アップできる」という考え方に対して疑問を投げかけます。",
     "created": 1596660115289,
@@ -10,7 +23,7 @@
       "ティール組織",
       "読書感想文"
     ],
-    "thumbnail": "/thumbnails/teal-organization.png",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/teal-organization.png",
     "slug": "teal-organization"
   },
   {
@@ -61,7 +74,7 @@
       "心理的安全性",
       "組織"
     ],
-    "thumbnail": "/thumbnails/manager.png",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/manager.png",
     "slug": "manager"
   },
   {
@@ -135,6 +148,16 @@
     "slug": "rails-dependent"
   },
   {
+    "title": "統計学は本当に最強の学問なの？盲信すると落とし穴がありますよ",
+    "description": "統計に依存することが間違いな理由を説明していきます。",
+    "created": 1534172400000,
+    "tags": [
+      "統計"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/0d202a3a728c62857e6d6df88a06b9fe.jpg",
+    "slug": "statistics"
+  },
+  {
     "title": "AIでプログラマーの仕事がなくなるという嘘",
     "description": "AIに仕事が取られるなんて話が言われる中で、仕事を取られる筆頭としてあげられるのがプログラマーです。ITエンジニアの立場からこの説を否定します。",
     "created": 1534032000000,
@@ -157,6 +180,17 @@
     "slug": "engineer-interview"
   },
   {
+    "title": "論理的なゲーム作りをするとどうなるのか",
+    "description": "論理的に作られたゲームってどんなものなのかを、お伝えします。",
+    "created": 1532876400000,
+    "tags": [
+      "論理的思考",
+      "ゲーム"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/86cf422fcc88f8754cb2b9de5e3b2a92.jpg",
+    "slug": "todai-game"
+  },
+  {
     "title": "【ひたすら座学はNG】プログラミングが出来るようになる最短の道",
     "description": "AIに仕事が取られるーなんて話が言われる中で、仕事を取られる筆頭としてあげられるのがプログラマーです。",
     "created": 1532530800000,
@@ -166,6 +200,19 @@
     ],
     "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/167a1766473e8bbf729bb80d997453e4.jpg",
     "slug": "way-to-programmer"
+  },
+  {
+    "title": "「この会社大丈夫かな」「フリーランス不安」フリーランスと正社員どっちが正解なの？",
+    "description": "フリーランスと正社員どちらがいいかについて、どちらも経験した立場からフラットに検討します。",
+    "created": 1532358000000,
+    "tags": [
+      "エンジニア",
+      "キャリア",
+      "フリーランス",
+      "正社員"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/ceae12dd573358e3b36e1f62f386bc4b.jpg",
+    "slug": "freelance"
   },
   {
     "title": "なんで意見が食い違うの？あなたの思い込みが論理的思考を腐らせる",
