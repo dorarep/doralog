@@ -8,35 +8,37 @@ thumbnail: https://storage.googleapis.com/stacky-health/2018/08/RubyOnRailsDepen
 
 # ActiveRecordのdependentオプションとは
 
-dependentオプションとは、モデルが削除されるときの、関係づけされたモデルに対する挙動を定義するものです。
+dependentオプションとは、モデルが`destroy`されたときの、関係づけされたモデルに対する挙動を定義するものです。
 
-たとえばこちらのコードの場合、Heroオブジェクトが削除されたときの、Weaponオブジェクトに対する挙動を定義しています。
+たとえばこちらのコードの場合、Heroが`destroy`されたときの、Heroに関連づけられたWeaponに対する挙動を定義しています。
 
 <CodeBlock lang="ruby" code="class Hero < ApplicationRecord
   has_one :weapon, dependent: :nullify
 end" />
 
+<amp-img width="620" height="349" layout="intrinsic" src="https://untraten.sirv.com/images/hero_weapon.png?w=620" alt="勇者がdestroyされたら装備のdependentが実行される図" />
+
 dependentで設定できる値は、大きく分けて4つあります。
 
-## dependent: destroy
+# dependent: destroy
 
-こちらを指定すると、_削除時に指定したモデルに対して`destroy`が実行される_ようになります。
+こちらを指定すると、_`destroy`時に関連づけられたモデルに対して`destroy`が実行される_ようになります。
 
 <CodeBlock lang="ruby" code="class Hero < ApplicationRecord
   has_one :weapon, dependent: :destroy
 end" />
 
-たとえばこのコードの場合、Heroモデルが削除されたら、Weaponモデルに対して`destroy`が実行されるわけです。
+たとえばこのコードの場合、Heroモデルが`destroy`されたら、Weaponモデルに対しても`destroy`が実行されるわけです。
 
 <CodeBlock lang="ruby" code="Weapon.destroy # これと同じ処理が実行される。" />
 
-`destroy`が実行されるので、それに関連した処理も逐次実行されていくことになります。
+## 関連した処理も実行される
 
+`destroy`が実行されるので、それに関連した処理も逐次実行されていくことになります。
 `before_destroy`など`destroy`に対するフックが実行されますし、孫クラスにも`dependent :destroy`があれば、孫クラスも合わせて削除されます。
 
 それは反面、実行すべき処理が多いというデメリットでもあります。
-
-クエリだけ見ても最初にSELECTが実行され、`has_many`の場合は意識しないと1個1個SELECTされてしまうのが欠点ですね。
+関連が未取得の場合は最初に`SELECT`が実行されます。特に`has_many`の場合は1個1個`SELECT`されることがないよう注意しましょう。
 
 ```
 pry(main)> hero.destroy (0.2ms)
@@ -48,20 +50,19 @@ SQL (0.4ms) DELETE FROM `weapons` WHERE `weapons`.`id` = 1
 ## 使うタイミング
 
 - 削除時に、指定したモデルのレコードも削除したい。（レコード数が増えると困る）
-- before_destroyや、孫クラスのdependentなど、destroyに関連したフックを実行したい。
+- `before_destroy`や、孫クラスの`dependent`など、`destroy`に関連した処理も実行したい。
 - 速度・サーバ負荷が気にならない
 
 # dependent: delete / delete_all
-
-`belongs_to`, `has_one`の場合は`:delete`、`has_many`の場合は`:delete_all`となります。
 
 `delete`か`delete_all`を指定すると、削除時に指定したモデルに対してDELETEクエリが直接実行されます。
 
 <CodeBlock lang="ruby" code="Weapon.delete # これと同じ処理が実行される。" />
 
-DBからレコードを削除するという必要最低限の処理のみが行われるため、`destroy`と比較して処理が早いです。
+`belongs_to`, `has_one`の場合は`:delete`、`has_many`の場合は`:delete_all`と記述します。
 
-また関連した処理も実行されないため、`before_destroy`が実行されると困る場合などでも使えるかもしれません。
+DBからレコードを削除するという必要最低限の処理のみが行われるため、`destroy`と比較して処理が早いです。
+また関連した処理も実行されないため、`before_destroy`などの関連した処理を実行されると困る場合などでも使えます。
 
 ## 使うタイミング
 
@@ -77,13 +78,13 @@ DBからレコードを削除するという必要最低限の処理のみが行
   has_one :weapon, dependent: :nullify
 end" />
 
-こちらのコードの場合、Weaponsテーブルの該当レコードにおける、`hero_id`の値が`NULL`に`UPDATE`されるわけですね。
+こちらのコードの場合、Weaponテーブルの該当レコードにおける、`hero_id`が`NULL`に`UPDATE`されるわけですね。
 
 削除されることはないため、残ったレコードは永遠に残り続けることになります。
+そのため記録としてデータを残しておきたいときなどに便利です。
+また`UPDATE`のみなので`DELETE`より負荷は軽く、削除の負荷に耐えられないような高負荷サービスでも選択肢に入るでしょう。
 
-したがって、いずれテーブル内の無駄なレコードを整理する必要が出てくることは想定しておきましょう。
-
-またクエリだけ見ると、`UPDATE`のみなので`DELETE`より負荷は軽いです。
+とはいえ無尽蔵にデータが増え続けるため、いずれテーブル内の無駄なレコードを整理する必要が出てくることは想定しておく必要があります。
 
 ## 使うタイミング
 
