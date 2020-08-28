@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[doralog]]></title>
+        <description><![CDATA[doralog]]></description>
+        <link>https://dorarep.page</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Fri, 28 Aug 2020 05:39:16 GMT</lastBuildDate>
+        <atom:link href="https://dorarep.page/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[レスポンシブに異なる画像を提供するベストな方法【srcset】]]></title>
+            <description><![CDATA[HTMLでレスポンシブに画像を指定する方法と、異なるサイズの画像を楽に用意する方法について説明していきます。]]></description>
+            <link>https://dorarep.page/articles/responsive-image-delivery</link>
+            <guid isPermaLink="false">responsive-image-delivery</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Sun, 16 Aug 2020 17:37:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ホラクラシー組織は上下関係がない組織じゃない]]></title>
+            <description><![CDATA[ホラクラシー組織は上下関係がない組織という誤解を解いていきます。]]></description>
+            <link>https://dorarep.page/articles/holacracy</link>
+            <guid isPermaLink="false">holacracy</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Sun, 16 Aug 2020 04:35:05 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ティール組織はなぜ優れているのか]]></title>
+            <description><![CDATA[「ただ1年単位での転職を繰り返せば無条件でスキルアップ・収入アップできる」という考え方に対して疑問を投げかけます。]]></description>
+            <link>https://dorarep.page/articles/teal-organization</link>
+            <guid isPermaLink="false">teal-organization</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Wed, 05 Aug 2020 20:41:55 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[OKRがうまくいかない？運用方法とアンチパターンを解説！]]></title>
+            <description><![CDATA[OKRは、目標の設定・管理システムの１つです。この記事ではOKRのコンセプトを見つめ直し、それを踏まえアンチパターンとその対処法をまとめていきます。]]></description>
+            <link>https://dorarep.page/articles/okr</link>
+            <guid isPermaLink="false">okr</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Wed, 25 Dec 2019 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Node.jsの構造や仕組みは？【普及した理由】]]></title>
+            <description><![CDATA[Node.jsは、GoogleがChromeのために開発したV8エンジンを利用したJavaScriptの実行環境です。V8エンジンはいきなりJavaScriptを直接マシン語にコンパイルし、プログラムを実行することで、高速な実行を可能にしました。]]></description>
+            <link>https://dorarep.page/articles/node-js</link>
+            <guid isPermaLink="false">node-js</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Mon, 23 Dec 2019 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[【JavaScript】Web技術の歴史【ブラウザ】]]></title>
+            <description><![CDATA[Webブラウザの誕生から、特にJavaScript周辺技術がなぜ起こったかについて詳しく説明していきます。]]></description>
+            <link>https://dorarep.page/articles/javascript-history</link>
+            <guid isPermaLink="false">javascript-history</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Sun, 22 Dec 2019 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[マネージャーは結局、なにをする人なのか]]></title>
+            <description><![CDATA[マネージャーって結局、なにをする人なのでしょうか。その曖昧性からマネージャー不要論なども出ている現在ですので、改めてその役割について考えていきたいと思います。]]></description>
+            <link>https://dorarep.page/articles/manager</link>
+            <guid isPermaLink="false">manager</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Tue, 09 Jul 2019 10:33:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[CUIとGUIとは？噛み砕いて解説します！【初心者向け】]]></title>
+            <description><![CDATA[GUIとCUIの違いから、CUIを使う理由や使うべき場所について説明していきます。]]></description>
+            <link>https://dorarep.page/articles/cui-gui</link>
+            <guid isPermaLink="false">cui-gui</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Fri, 07 Jun 2019 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[カーネルとは？その目的と機能のまとめ【UNIX系】]]></title>
+            <description><![CDATA[MacやWindowsといった、OSの中核をなすプログラムにあたるカーネルについて詳しく説明してきます。]]></description>
+            <link>https://dorarep.page/articles/kernel</link>
+            <guid isPermaLink="false">kernel</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Fri, 07 Jun 2019 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[【エンジニア】1年で転職は失敗する？採用側の意見を言います！]]></title>
+            <description><![CDATA[「ただ1年単位での転職を繰り返せば無条件でスキルアップ・収入アップできる」という考え方に対して疑問を投げかけます。]]></description>
+            <link>https://dorarep.page/articles/changing-jobs</link>
+            <guid isPermaLink="false">changing-jobs</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Wed, 03 Apr 2019 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[役割の固定化が生む組織の問題と改善策]]></title>
+            <description><![CDATA[担当や役割を決め、その線引き以上には踏み入らないような文化で起こる問題点と、改善案について考察していきます。]]></description>
+            <link>https://dorarep.page/articles/fixed-role</link>
+            <guid isPermaLink="false">fixed-role</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Tue, 01 Jan 2019 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[リモートワークはつらいので辞めました！【半年やった感想】]]></title>
+            <description><![CDATA[リモートワークを半年間やってきて、なにが辛かったか、私が抱いた印象を振り返っていきます。]]></description>
+            <link>https://dorarep.page/articles/remote-work</link>
+            <guid isPermaLink="false">remote-work</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Sat, 29 Dec 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[【Rails】ActiveRecordの:dependent使い分けまとめ【:destroy, :delete, :nullify】]]></title>
+            <description><![CDATA[身体を動かすために使われるエネルギーをATPと言います。この記事では、現代人が失いがちなATPの補充方法について説明します。]]></description>
+            <link>https://dorarep.page/articles/rails-dependent</link>
+            <guid isPermaLink="false">rails-dependent</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Fri, 17 Aug 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[統計学は本当に最強の学問なの？盲信すると落とし穴がありますよ]]></title>
+            <description><![CDATA[統計に依存することが間違いな理由を説明していきます。]]></description>
+            <link>https://dorarep.page/articles/statistics</link>
+            <guid isPermaLink="false">statistics</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Mon, 13 Aug 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[AIでプログラマーの仕事がなくなるという嘘]]></title>
+            <description><![CDATA[AIに仕事が取られるなんて話が言われる中で、仕事を取られる筆頭としてあげられるのがプログラマーです。ITエンジニアの立場からこの説を否定します。]]></description>
+            <link>https://dorarep.page/articles/programmer-to-ai</link>
+            <guid isPermaLink="false">programmer-to-ai</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Sun, 12 Aug 2018 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[良いエンジニアを採用するための面接のやり方]]></title>
+            <description><![CDATA[良いエンジニアを採用するための面接やり方について、体系的にまとめていきます。]]></description>
+            <link>https://dorarep.page/articles/engineer-interview</link>
+            <guid isPermaLink="false">engineer-interview</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Thu, 02 Aug 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[論理的なゲーム作りをするとどうなるのか]]></title>
+            <description><![CDATA[論理的に作られたゲームってどんなものなのかを、お伝えします。]]></description>
+            <link>https://dorarep.page/articles/todai-game</link>
+            <guid isPermaLink="false">todai-game</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Sun, 29 Jul 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[【ひたすら座学はNG】プログラミングが出来るようになる最短の道]]></title>
+            <description><![CDATA[AIに仕事が取られるーなんて話が言われる中で、仕事を取られる筆頭としてあげられるのがプログラマーです。]]></description>
+            <link>https://dorarep.page/articles/way-to-programmer</link>
+            <guid isPermaLink="false">way-to-programmer</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Wed, 25 Jul 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[「この会社大丈夫かな」「フリーランス不安」フリーランスと正社員どっちが正解なの？]]></title>
+            <description><![CDATA[フリーランスと正社員どちらがいいかについて、どちらも経験した立場からフラットに検討します。]]></description>
+            <link>https://dorarep.page/articles/freelance</link>
+            <guid isPermaLink="false">freelance</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Mon, 23 Jul 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[なんで意見が食い違うの？あなたの思い込みが論理的思考を腐らせる]]></title>
+            <description><![CDATA[論理的思考をしてもなぜ争うのか、認知の歪みの観点から説明していきます。]]></description>
+            <link>https://dorarep.page/articles/cognitive-distortion</link>
+            <guid isPermaLink="false">cognitive-distortion</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Sun, 22 Jul 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[プレゼンを圧倒的に上手くする方法　ストーリーテリング]]></title>
+            <description><![CDATA[口下手を発表上手に変えるストーリーテリングの技法を今回は紹介します。]]></description>
+            <link>https://dorarep.page/articles/storytelling</link>
+            <guid isPermaLink="false">storytelling</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Wed, 18 Jul 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[なぜ報告しないんだ！？心理的安全性を確保する組織の作り方]]></title>
+            <description><![CDATA[心理的安全性とは、「対人リスクをとっても問題ないという信念がチームで共有されている状態」のことです。心理的安全性を確保する組織の作り方について説明します。]]></description>
+            <link>https://dorarep.page/articles/psychological-safety</link>
+            <guid isPermaLink="false">psychological-safety</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Tue, 17 Jul 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[行動を促すためのアイデンティティを活かした組織の作りかた]]></title>
+            <description><![CDATA[アイデンティティをうまく扱うことで、チームメンバーにしてほしい行動を促すこともできるようになります。人々の行動を左右するアイデンティティと、それを活かしたチームづくりについて書いていきます。]]></description>
+            <link>https://dorarep.page/articles/identity</link>
+            <guid isPermaLink="false">identity</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Sun, 15 Jul 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[MVP制度は悪影響？モチベーションを最大化する競争のデザイン]]></title>
+            <description><![CDATA[競争が社員のモチベーションに悪影響を与えていることがあります。競争とモチベーションの関係性と、そこから見る最適な競争の作り方について記載していきます。]]></description>
+            <link>https://dorarep.page/articles/motivate</link>
+            <guid isPermaLink="false">motivate</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Sun, 15 Jul 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[あなたが部下に任せられない理由とは？モチベーションの関係とあわせて解説]]></title>
+            <description><![CDATA[マネージャーは下に仕事を任せる立場だ！なんて言うのは良く言われますが、なかなか任せられない人も多くいます。任せることとモチベーションの関係性と、あなたがなぜ任せられないのかを紐解いていきます。]]></description>
+            <link>https://dorarep.page/articles/empowerment</link>
+            <guid isPermaLink="false">empowerment</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Fri, 13 Jul 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[仕事で成功するための自分の強みの生かし方]]></title>
+            <description><![CDATA[この記事では自分の強みを活かす方法についてまとめていきます。]]></description>
+            <link>https://dorarep.page/articles/strength-finder</link>
+            <guid isPermaLink="false">strength-finder</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Tue, 03 Jul 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[仕事における情報収集の方法とは？「僕らが毎日やっている最強の読み方」感想]]></title>
+            <description><![CDATA[競争が社員のモチベーションに悪影響を与えていることがあります。競争とモチベーションの関係性と、そこから見る最適な競争の作り方について記載していきます。]]></description>
+            <link>https://dorarep.page/articles/information-gathering</link>
+            <guid isPermaLink="false">information-gathering</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Fri, 06 Jan 2017 15:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

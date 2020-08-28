@@ -1,6 +1,6 @@
 module.exports = {
   useOgp: true,
-  host: "https://dorarep.page/",
+  host: "https://dorarep.page",
   siteName: "doralog",
   author: "dorarep",
   authorLink: "https://twitter.com/dorarep",

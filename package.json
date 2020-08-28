@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "amdxg build:index && amdxg build:history && node script/build-tags.mjs && next build && next export",
-    "dev": "amdxg build:index && amdxg build:history && node script/build-tags.mjs && next",
+    "build": "amdxg build:index && amdxg build:history && node script/build-tags.mjs && node script/build-xml.js && next build && next export",
+    "dev": "amdxg build:index && amdxg build:history && node script/build-tags.mjs && node script/build-xml.js && next",
     "generate-ogp": "node script/generate-ogp.mjs",
     "new-page": "amdxg new:page"
   },
@@ -15,7 +15,7 @@
     "next": "latest",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "xml-js": "^1.6.11"
+    "rss": "^1.2.2"
   },
   "devDependencies": {
     "@types/react": "^16.9.43",
