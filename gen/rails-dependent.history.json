@@ -1,5 +1,11 @@
 [
   {
+    "date": "Fri Aug 21 14:58:45 2020 +0900",
+    "hash": "72ddb24",
+    "author": "dorarep",
+    "message": "feat: update rails dependent"
+  },
+  {
     "date": "Mon Aug 3 10:11:00 2020 +0900",
     "hash": "3dc73aa",
     "author": "dorarep",
