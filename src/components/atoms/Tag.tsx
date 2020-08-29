@@ -1,9 +1,13 @@
 import {FC} from "react";
 
-export const Tag: FC = ({ children }) => {
+type Props = {
+  disable?: boolean;
+}
+
+export const Tag: FC<Props> = ({ children, disable }) => {
   return (
     <>
-      <a href={`/tags/${children}`}>
+      <a href={disable ? '' : `/tags/${children}`}>
         {children}
       </a>
       <style jsx>{`

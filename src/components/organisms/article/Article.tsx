@@ -24,6 +24,14 @@ export const Article: FC<Props> = ({
       {thumbnail && <amp-img alt="thumbnail" layout="intrinsic" width='1120' height='630' src={thumbnail} />}
       {children}
       <div className="tags">{tags.map(tag => (<Tag key={tag}>{tag}</Tag>))}</div>
+      <hr />
+      <div className="me">
+        <amp-img src="https://untraten.sirv.com/logo.png" width="80" height="80" alt="logo" />
+        <div>
+          <a href='/me'>@dorarep</a>
+          <div>小学生の頃からフリーゲーム作ってました。今はフリーランスでフルスタックエンジニアしてます。</div>
+        </div>
+      </div>
     </article>
     <style jsx>{`
         article {
@@ -35,6 +43,13 @@ export const Article: FC<Props> = ({
         .tags {
           display: flex;
           flex-wrap: wrap;
+        }
+        .me {
+          display: flex;
+        }
+        .me a {
+          text-decoration: none;
+          color: var(--dark-main-color);
         }
         h1 {
           font-size: 1.5rem;
