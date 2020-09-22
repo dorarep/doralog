@@ -4,7 +4,7 @@
         <description><![CDATA[doralog]]></description>
         <link>https://dorarep.page</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 22 Sep 2020 09:34:24 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 22 Sep 2020 16:39:01 GMT</lastBuildDate>
         <atom:link href="https://dorarep.page/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[アトキンソンの『日本人の勝算』と、管内閣]]></title>
@@ -39,6 +39,14 @@
             <pubDate>Wed, 05 Aug 2020 20:41:55 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[プログラミングは理系科目なのか]]></title>
+            <description><![CDATA[最近は「文系エンジニアが◯◯」などの記事がよく注目を集めます。プログラミングにおける文系と理系の差を考えてみたいと思います。]]></description>
+            <link>https://dorarep.page/articles/programming-is-science</link>
+            <guid isPermaLink="false">programming-is-science</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Thu, 02 Jan 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[OKRがうまくいかない？運用方法とアンチパターンを解説！]]></title>
             <description><![CDATA[OKRは、目標の設定・管理システムの１つです。この記事ではOKRのコンセプトを見つめ直し、それを踏まえアンチパターンとその対処法をまとめていきます。]]></description>
             <link>https://dorarep.page/articles/okr</link>
@@ -61,6 +69,14 @@
             <guid isPermaLink="false">javascript-history</guid>
             <dc:creator><![CDATA[dorarep]]></dc:creator>
             <pubDate>Sun, 22 Dec 2019 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[DDDは結局、なにを実現したいのか]]></title>
+            <description><![CDATA[最近は「文系エンジニアが◯◯」などの記事がよく注目を集めます。プログラミングにおける文系と理系の差を考えてみたいと思います。]]></description>
+            <link>https://dorarep.page/articles/ddd</link>
+            <guid isPermaLink="false">ddd</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Tue, 10 Sep 2019 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[マネージャーは結局、なにをする人なのか]]></title>

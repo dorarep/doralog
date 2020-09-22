@@ -49,6 +49,16 @@
     "slug": "teal-organization"
   },
   {
+    "title": "プログラミングは理系科目なのか",
+    "description": "最近は「文系エンジニアが◯◯」などの記事がよく注目を集めます。プログラミングにおける文系と理系の差を考えてみたいと思います。",
+    "created": 1577923200000,
+    "tags": [
+      "エンジニア"
+    ],
+    "thumbnail": "https://untraten.sirv.com/thumbnails/programming-is-science.png",
+    "slug": "programming-is-science"
+  },
+  {
     "title": "OKRがうまくいかない？運用方法とアンチパターンを解説！",
     "description": "OKRは、目標の設定・管理システムの１つです。この記事ではOKRのコンセプトを見つめ直し、それを踏まえアンチパターンとその対処法をまとめていきます。",
     "created": 1577232000000,
@@ -86,6 +96,17 @@
     ],
     "thumbnail": "https://storage.googleapis.com/stacky-health/2019/12/72a00cd568035ab1be8943367978e58c.png",
     "slug": "javascript-history"
+  },
+  {
+    "title": "DDDは結局、なにを実現したいのか",
+    "description": "最近は「文系エンジニアが◯◯」などの記事がよく注目を集めます。プログラミングにおける文系と理系の差を考えてみたいと思います。",
+    "created": 1568073600000,
+    "tags": [
+      "DDD",
+      "設計"
+    ],
+    "thumbnail": "https://untraten.sirv.com/thumbnails/ddd.png",
+    "slug": "ddd"
   },
   {
     "title": "マネージャーは結局、なにをする人なのか",
