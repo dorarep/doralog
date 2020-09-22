@@ -1,5 +1,15 @@
 [
   {
+    "title": "アトキンソンの『日本人の勝算』と、管内閣",
+    "description": "管内閣の誕生に際し、『日本人の勝算』から日本の未来を占います。",
+    "created": 1600756177460,
+    "tags": [
+      "読書感想文"
+    ],
+    "thumbnail": "https://untraten.sirv.com/thumbnails/a-change-of-success.png",
+    "slug": "a-chance-of-success"
+  },
+  {
     "title": "レスポンシブに異なる画像を提供するベストな方法【srcset】",
     "description": "HTMLでレスポンシブに画像を指定する方法と、異なるサイズの画像を楽に用意する方法について説明していきます。",
     "created": 1597599460910,
