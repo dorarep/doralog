@@ -26,7 +26,7 @@ export const Article: FC<Props> = ({
       <div className="tags">{tags.map(tag => (<Tag key={tag}>{tag}</Tag>))}</div>
       <hr />
       <div className="me">
-        <amp-img src="https://untraten.sirv.com/logo.png" width="80" height="80" alt="logo" />
+        <amp-img src="https://untraten.sirv.com/logo.png" layout="fixed" width="80" height="80" alt="logo" />
         <div>
           <a href='/me'>@dorarep</a>
           <div>小学生の頃からフリーゲーム作ってました。今はフリーランスでフルスタックエンジニアしてます。</div>
@@ -46,6 +46,7 @@ export const Article: FC<Props> = ({
         }
         .me {
           display: flex;
+          flex-wrap: wrap;
         }
         .me a {
           text-decoration: none;

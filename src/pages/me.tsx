@@ -24,7 +24,6 @@ const IndexPage: NextPage = () => (
           <div>
             <h1 className="name">dorarep</h1>
             <p className="description">Full-stack web developer</p>
-            <Tag>JavaScript</Tag>
             <Tag>TypeScript</Tag>
             <Tag>Ruby</Tag>
             <Tag disable>PHP</Tag>
@@ -49,6 +48,7 @@ const IndexPage: NextPage = () => (
           display: flex;
           justify-content: center;
           align-items: center;
+          flex-wrap: wrap;
           width: 100%;
         }
         .name {
