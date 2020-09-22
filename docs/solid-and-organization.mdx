@@ -1,0 +1,245 @@
+---
+title: SOLID原則から見える、良い組織の形とは
+description: この記事ではSOLID原則などを元に良い組織の探しかたを説明していきます。
+created: 1568937600000
+tags: [設計, 組織, SOLID原則]
+thumbnail: https://untraten.sirv.com/thumbnails/solid-and-organization.png
+---
+
+育児休暇や副業解禁、リモートワークなど、自由な働き方が叫ばれる時代になってきました。
+一方で、「こんな状況で休めると思ってるのか！」なんて組織も相変わらず存在します。
+
+その違いとして1つあるのは、「最悪誰かがいなくてもまわる状況」です。
+誰かがいないとまわらなくなるという状況だと、いつまでたっても休むことができません。
+
+では、「最悪誰かがいなくてもまわる状況」を実現するにはどうすれば良いでしょうか？
+そのためには、組織における特定個人への依存度を下げ、交換可能性を高めていく必要があります。
+
+...「依存度を下げる」「交換可能性」？
+
+これって設計でよく聞く単語ですよね？
+
+そう、良い組織とは、良いアーキテクチャでもあるのです！
+ということでこの記事ではSOLID原則などを元に良い組織の探しかたを説明していきます。
+
+# インターフェースの定義
+A社には佐藤さんと田中さんがいます。
+この2人はそれぞれ色々なことをしてるようですが、何をしてるのかはよく変わっていません。
+
+```ts
+class Sato {
+    work1(): Output { … }
+    work2(document): Code { … }
+}
+class Tanaka {
+    work1(): Document { … }
+    work2(): Output { … }
+    work3(code): Product { … }
+}
+```
+
+突然佐藤さんが「次の会社が見つかったのでやめます！」と言い始めました。
+急遽引き継ぎMTGを設定しましたが、あらゆる仕事に関わっていてなかなか整理することができません。
+
+```ts
+executeTask1 = (tanaka: Tanaka, sato: Sato) => {
+    output = sato.work1()
+    return tanaka.work2(output)
+}
+executeTask2 = (tanaka: Tanaka, sato: Sato) => {
+    document = tanaka.work1()
+    code = sato.work2(document)
+    return tanaka.work3(code)
+}
+```
+
+それぞれの仕事に必要なスキルも違うし、あらゆるタスクでの佐藤さんの役割を洗い上げるのが大変です。
+このままだと引き継ぎ者は苦労した挙句すぐ辞めてしまい、人が入っては辞めていく闇の組織になってしまいまs。
+
+さあ、こんな「ダメな設計」を変えていきましょう！
+
+## 依存関係逆転の原則
+この例では、会社が佐藤や田中という個人に依存しています。
+そのため交換可能性の低い組織設計となっているのです。
+
+なのでまずは、個人への依存から抽象への依存へと変えていきましょう。
+
+```ts
+interface Engineer {
+    public develop(spec: Spec): Code
+    public markUp(design: Design): Code
+}
+```
+
+```ts
+class Sato implements Engineer
+```
+
+```ts
+developNewFeature = (productOwner: ProductOwner, engineer: Engineer) => {
+    spec = productOwner.createSpec()
+    code = engineer.develop(spec)
+    return engineer.deploy(code)
+}
+```
+
+これで佐藤さんはエンジニアに依存し、組織もエンジニアに依存するようになります。
+組織から佐藤さんへの依存関係がなくなったわけです。
+
+つまり、これで佐藤さんが辞めてもエンジニアであれば仕事を任せることができるようになりました。
+
+_依存関係逆転の法則は、このように抽象への依存にすることで、上位レイヤから下位レイヤへの依存関係をなくすことをいいます_。
+これを組織に適用することで、特定個人への依存をなくすことができるわけです。
+
+### インターフェース分離の原則
+佐藤さんは、フルスタックエンジニアで、デザインもできて、お酒も強くて営業も任せられるスーパーエンジニアです。
+インターフェースを定義して、変わりを探しましょう。
+
+```ts
+interface SuperEngineer {
+    public develop(spec: Spec): Code
+    public markUp(design: Design): Code
+    public design(spec: Spec): Design
+    Public drink(alcohol: Alcohol)
+    public sale(product: Product, company: Company)
+}
+```
+
+しかし、インターフェースを定義したもののなかなか次の人が見つかりません。
+見つかるまで、開発も、デザインも、営業も、いろいろな仕事が止まってしまうこととなってしまいました。
+あらゆる仕事がこのスーパーエンジニアに依存しているからです。
+
+この場合、例えばバックエンド開発においてdrinkメソッドの有無は全く関係がありません。
+にも関わらずSuperEngineerは全てdrinkメソッドが実装されなければなりません。
+
+このように関係ない仕事同士が同じインターフェースに混在していると、不必要な機能まで求めることとなってしまいます。
+また、あらゆる仕事がこのインターフェースに依存するため、問題があった際に影響範囲が大きくなってしまいます。
+
+なので関係ある仕事のみでまとまるように、インターフェースを分離しましょう。
+
+```ts
+Interface FrontendEngineer {
+    public markUp(design: Design): Code
+}
+Interface BackendEngineer {
+    public develop(spec: Spec): Code
+    public deploy(code: Code): Product
+}
+Interface Designer {
+    public design(spec: Spec): Design
+}
+Interface Drinkable {
+    Public drink(alcohol: Alcohol)
+}
+
+Class Matsumoto implements FrontendEngineer
+Class Ono implements BackendEngineer
+…
+```
+
+これで、具体が不必要な実装を持つ必要はなくなりました。
+お酒が飲めないエンジニアも採用できるようになったのです。
+
+インターフェースが分離できていないと、あらゆることができるスーパーマンを求めがちです。
+適切にインターフェースを分離することで、組織に不足している資質を持つ人をピンポイントで補うことができます。
+
+### リスコスの置換原則
+さて、インターフェースを分離したことでうまく代わりの人が雇用できました。
+早速仕事してもらいましょう！
+
+```
+    backendEngineer.writeCode(currentCode)
+    -> Invalid argument error! currentCode must be PHPCode.
+```
+
+ん？
+なんかコードが追加できないみたいですね。
+
+どうやらバックエンドはrailsで書かれていたのに、PHPしか書けないバックエンドエンジニアを雇ってしまったみたいです！
+
+バックエンドエンジニアなら誰でもこの仕事ができるわけではなく、Railsが書けるバックエンドエンジニアでないといけなかったようです。
+
+```ts
+Interface RailsBackendEngineer {
+    public writeCode(currentCode: RubyCode): RubyCode
+}
+```
+
+インターフェースが適切な抽象度になっていないと、交換不可能な実装ができてしまいます。
+その実装を持つ具体が必ずできる仕事に落とし込んで、インターフェースを定義しましょう。
+
+## インターフェースの書いてある場所
+さて、ここまで見てきたinterfaceに近しいものを見たことないでしょうか？
+
+そう、求人票です。
+
+```
+【募集】フロントエンドエンジニア
+・Reactが書ける方
+・HTMLのマークアップができる方
+…
+```
+
+求人票が組織の定義したインターフェースであり、それがまともに設計できてない会社はまともな組織でない可能性が高いと言えます。
+
+```
+【募集】プログラマー
+・経験年数10年以上。
+・コミュニケーション能力の高い人。
+・自走できる人。
+```
+
+インターフェースがしっかり定義できていないと、現場においても曖昧な指示をされる可能性が高いです。
+いわゆる「エンジニアなんだからパソコン直してよ」みたいな話ですね。
+
+そういった組織を避けたい方は、自衛のために求人票はよく見るようにしましょう。
+
+# ドメインの分離
+さて、インターフェースを適切に分離できたとしても、現実としていくらでも交換可能になるなんてことはありm戦。
+
+なぜなら多くの場合、ドメインロジックが個々人に記述されてるからです。
+
+そのためそのドメインロジックを新人に記述し直す「引き継ぎ」という作業が発生します。
+
+```ts
+class Sato {
+    reportDAU() {
+        const dau = chrome.open('https://biitool/dau')
+        const excel = excelRepository.get('DAU.xlsx')
+        newSheet = excel.createSheet
+        newSheet[0] = [new Date(), dau]
+        ...
+```
+
+ドメインは、そのビジネス固有の世界です。
+
+ドメイン知識を個々人が持つと、交換可能性は大きく下がってしまいます。
+
+個々人はあくまで「コーディングスキルなどドメインから切り離された能力を持つもの」であり、ドメインとは分離するべきなのです。
+
+```ts
+reportDAU(worker: Worker) {
+    const dau = worker.openUrl('https://biitool/dau')
+    worker.openExcel('DAU.xlsx')
+    worker.createNewSheet([new Date(), dau])
+}
+```
+
+これでブラウザやExcelが使える人であれば、手順を個々人が覚えることなくreportDAUができるようになりました。
+またブラウザでChromeを使うか、FireFoxを使うかは、ビジネスに関係ないところなので、個々人の実装次第です。
+
+## ドキュメント
+
+この切り離したドメインロジックはどこに記述するべきでしょうか。
+
+それは、社内ドキュメントです。
+
+ドキュメントにドメイン知識が集約されれば、個々人は交換可能となります。
+会社はドキュメントに依存し、個人もドキュメントに依存する形となるわけです。
+
+個々人は、「エクセルを開く」などの留め委任い依存しない能力だけを提供してくれれば仕事が回るようになります。
+
+# まとめ
+SOLID原則から見える、良い組織についてをまとめていきました。
+コンウェイの法則にもあるように、組織とソフトウェアアーキテクチャには深い関係があります。
+良い設計技法を学ぶことは、良い組織設計にも繋がっていくとも言えるでしょう。

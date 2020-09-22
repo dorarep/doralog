@@ -98,6 +98,29 @@
     "slug": "javascript-history"
   },
   {
+    "title": "40代、居場所なし問題を考える",
+    "description": "最近40代で居場所を失ったエンジニアの記事を何度か目にしたので、思ったことをつらつらと書いていく。",
+    "created": 1569974400000,
+    "tags": [
+      "エンジニア",
+      "キャリアパス"
+    ],
+    "thumbnail": "https://untraten.sirv.com/thumbnails/40-years-old.png",
+    "slug": "40-years-old"
+  },
+  {
+    "title": "SOLID原則から見える、良い組織の形とは",
+    "description": "この記事ではSOLID原則などを元に良い組織の探しかたを説明していきます。",
+    "created": 1568937600000,
+    "tags": [
+      "設計",
+      "組織",
+      "SOLID原則"
+    ],
+    "thumbnail": "https://untraten.sirv.com/thumbnails/solid-and-organization.png",
+    "slug": "solid-and-organization"
+  },
+  {
     "title": "DDDは結局、なにを実現したいのか",
     "description": "最近は「文系エンジニアが◯◯」などの記事がよく注目を集めます。プログラミングにおける文系と理系の差を考えてみたいと思います。",
     "created": 1568073600000,
@@ -250,7 +273,7 @@
     "created": 1532358000000,
     "tags": [
       "エンジニア",
-      "キャリア",
+      "キャリアパス",
       "フリーランス",
       "正社員"
     ],

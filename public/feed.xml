@@ -4,7 +4,7 @@
         <description><![CDATA[doralog]]></description>
         <link>https://dorarep.page</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 22 Sep 2020 16:39:01 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 22 Sep 2020 17:16:09 GMT</lastBuildDate>
         <atom:link href="https://dorarep.page/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[アトキンソンの『日本人の勝算』と、管内閣]]></title>
@@ -69,6 +69,22 @@
             <guid isPermaLink="false">javascript-history</guid>
             <dc:creator><![CDATA[dorarep]]></dc:creator>
             <pubDate>Sun, 22 Dec 2019 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[40代、居場所なし問題を考える]]></title>
+            <description><![CDATA[最近40代で居場所を失ったエンジニアの記事を何度か目にしたので、思ったことをつらつらと書いていく。]]></description>
+            <link>https://dorarep.page/articles/40-years-old</link>
+            <guid isPermaLink="false">40-years-old</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Wed, 02 Oct 2019 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[SOLID原則から見える、良い組織の形とは]]></title>
+            <description><![CDATA[この記事ではSOLID原則などを元に良い組織の探しかたを説明していきます。]]></description>
+            <link>https://dorarep.page/articles/solid-and-organization</link>
+            <guid isPermaLink="false">solid-and-organization</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Fri, 20 Sep 2019 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[DDDは結局、なにを実現したいのか]]></title>
