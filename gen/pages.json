@@ -132,6 +132,17 @@
     "slug": "ddd"
   },
   {
+    "title": "エンジニアはプライベートを勉学に捧げるべきなのか",
+    "description": "最近、エンジニアはプライベートも勉学に捧げるべきかどうかが話題にあがっていたので、せっかくなので考えてみる。",
+    "created": 1563926400000,
+    "tags": [
+      "エンジニア",
+      "キャリアパス"
+    ],
+    "thumbnail": "https://untraten.sirv.com/thumbnails/engineer-self-study.png",
+    "slug": "engineer-self-study"
+  },
+  {
     "title": "マネージャーは結局、なにをする人なのか",
     "description": "マネージャーって結局、なにをする人なのでしょうか。その曖昧性からマネージャー不要論なども出ている現在ですので、改めてその役割について考えていきたいと思います。",
     "created": 1562668380000,

@@ -4,7 +4,7 @@
         <description><![CDATA[doralog]]></description>
         <link>https://dorarep.page</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 22 Sep 2020 17:16:09 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 22 Sep 2020 17:31:50 GMT</lastBuildDate>
         <atom:link href="https://dorarep.page/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[アトキンソンの『日本人の勝算』と、管内閣]]></title>
@@ -93,6 +93,14 @@
             <guid isPermaLink="false">ddd</guid>
             <dc:creator><![CDATA[dorarep]]></dc:creator>
             <pubDate>Tue, 10 Sep 2019 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[エンジニアはプライベートを勉学に捧げるべきなのか]]></title>
+            <description><![CDATA[最近、エンジニアはプライベートも勉学に捧げるべきかどうかが話題にあがっていたので、せっかくなので考えてみる。]]></description>
+            <link>https://dorarep.page/articles/engineer-self-study</link>
+            <guid isPermaLink="false">engineer-self-study</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Wed, 24 Jul 2019 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[マネージャーは結局、なにをする人なのか]]></title>
