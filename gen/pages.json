@@ -235,6 +235,16 @@
     "slug": "statistics"
   },
   {
+    "title": "小学生からのゲームクリエイターが選ぶ、システムが美しいゲーム3選",
+    "description": "小学生からゲームを作っていたエンジニアが感じた、システムが美しいゲームを3つ紹介します。",
+    "created": 1534086000000,
+    "tags": [
+      "ゲーム"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/3314e1ff143c032a8dec4d33599e5d15.jpg",
+    "slug": "game-recommendation"
+  },
+  {
     "title": "AIでプログラマーの仕事がなくなるという嘘",
     "description": "AIに仕事が取られるなんて話が言われる中で、仕事を取られる筆頭としてあげられるのがプログラマーです。ITエンジニアの立場からこの説を否定します。",
     "created": 1534032000000,
@@ -304,6 +314,16 @@
     "slug": "cognitive-distortion"
   },
   {
+    "title": "うちのエンジニアはなぜやる気がないの？全力で弁明します！！",
+    "description": "２ヶ月でチームの運用コストを半分以下にした方法をまとめていきます。",
+    "created": 1532012400000,
+    "tags": [
+      "エンジニア"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/dfb826ec3fd04c6c2d08cac94fd2ac6d.jpg",
+    "slug": "engineer-motivation"
+  },
+  {
     "title": "プレゼンを圧倒的に上手くする方法　ストーリーテリング",
     "description": "口下手を発表上手に変えるストーリーテリングの技法を今回は紹介します。",
     "created": 1531926000000,
@@ -368,16 +388,6 @@
     ],
     "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/18e9ef6d6f05034fa84d98d2a59f187e.jpg",
     "slug": "empowerment"
-  },
-  {
-    "title": "うちのエンジニアはなぜやる気がないの？全力で弁明します！！",
-    "description": "２ヶ月でチームの運用コストを半分以下にした方法をまとめていきます。",
-    "created": 1530889200000,
-    "tags": [
-      "エンジニア"
-    ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/dfb826ec3fd04c6c2d08cac94fd2ac6d.jpg",
-    "slug": "engineer-motivation"
   },
   {
     "title": "仕事で成功するための自分の強みの生かし方",

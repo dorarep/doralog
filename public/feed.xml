@@ -4,7 +4,7 @@
         <description><![CDATA[doralog]]></description>
         <link>https://dorarep.page</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 27 Sep 2020 08:09:11 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 27 Sep 2020 09:48:56 GMT</lastBuildDate>
         <atom:link href="https://dorarep.page/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[アトキンソンの『日本人の勝算』と、管内閣]]></title>
@@ -167,6 +167,14 @@
             <pubDate>Mon, 13 Aug 2018 15:00:00 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[小学生からのゲームクリエイターが選ぶ、システムが美しいゲーム3選]]></title>
+            <description><![CDATA[小学生からゲームを作っていたエンジニアが感じた、システムが美しいゲームを3つ紹介します。]]></description>
+            <link>https://dorarep.page/articles/game-recommendation</link>
+            <guid isPermaLink="false">game-recommendation</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Sun, 12 Aug 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[AIでプログラマーの仕事がなくなるという嘘]]></title>
             <description><![CDATA[AIに仕事が取られるなんて話が言われる中で、仕事を取られる筆頭としてあげられるのがプログラマーです。ITエンジニアの立場からこの説を否定します。]]></description>
             <link>https://dorarep.page/articles/programmer-to-ai</link>
@@ -215,6 +223,14 @@
             <pubDate>Sun, 22 Jul 2018 15:00:00 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[うちのエンジニアはなぜやる気がないの？全力で弁明します！！]]></title>
+            <description><![CDATA[２ヶ月でチームの運用コストを半分以下にした方法をまとめていきます。]]></description>
+            <link>https://dorarep.page/articles/engineer-motivation</link>
+            <guid isPermaLink="false">engineer-motivation</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Thu, 19 Jul 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[プレゼンを圧倒的に上手くする方法　ストーリーテリング]]></title>
             <description><![CDATA[口下手を発表上手に変えるストーリーテリングの技法を今回は紹介します。]]></description>
             <link>https://dorarep.page/articles/storytelling</link>
@@ -253,14 +269,6 @@
             <guid isPermaLink="false">empowerment</guid>
             <dc:creator><![CDATA[dorarep]]></dc:creator>
             <pubDate>Fri, 13 Jul 2018 15:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[うちのエンジニアはなぜやる気がないの？全力で弁明します！！]]></title>
-            <description><![CDATA[２ヶ月でチームの運用コストを半分以下にした方法をまとめていきます。]]></description>
-            <link>https://dorarep.page/articles/engineer-motivation</link>
-            <guid isPermaLink="false">engineer-motivation</guid>
-            <dc:creator><![CDATA[dorarep]]></dc:creator>
-            <pubDate>Fri, 06 Jul 2018 15:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[仕事で成功するための自分の強みの生かし方]]></title>
