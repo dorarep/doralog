@@ -31,6 +31,9 @@ DDDは良いドメインモデルを介してプロジェクトを成功させ�
 
 <amp-img alt="DDDの概要" layout="intrinsic" src="https://untraten.sirv.com/images/ddd-overview.png?w=900" width="900" height="244" />
 
+DDDというと実装方法ばかり注目されることが多いですが、このドメインモデルこそがDDDで最も重要なものなのです。
+逆に言えばドメインモデルを無視して実装方法だけ真似しても、それは少なくともエリックのやりたいことではありません。
+
 ## ドメインモデルって？
 ところで、このドメインモデルってなんなのでしょうか。
 ドメインモデルは、エヴァンス本ではこう書かれています。
@@ -181,8 +184,8 @@ class Book {
 ```ts
 class User {
   name: string = 'inactive'
-  getState(): string { return this.state }
-  setState(state: string): void { this.state = state }
+  getState(): UserState { return this.state }
+  setState(state: UserState): void { this.state = state }
   ...
 }
 ```
@@ -192,8 +195,8 @@ class User {
 ```ts
 register() {
     const user = userRepository.get(id)
-    user.setState = 'active'
-    user.registeredDate = new Date()
+    user.setState('active')
+    user.setRegisteredDate(new Date())
     const bonusItem = itemRepository.get(BONUS_ITEM_ID)
     user.setItemIds([ ...user.getItemIds, bonusItem.getId ])
     userRepository.store(user)

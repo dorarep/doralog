@@ -98,7 +98,7 @@
     "slug": "javascript-history"
   },
   {
-    "title": "40代、居場所なし問題を考える",
+    "title": "40代エンジニア、居場所なし問題を考える",
     "description": "最近40代で居場所を失ったエンジニアの記事を何度か目にしたので、思ったことをつらつらと書いていく。",
     "created": 1569974400000,
     "tags": [
@@ -368,6 +368,16 @@
     ],
     "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/18e9ef6d6f05034fa84d98d2a59f187e.jpg",
     "slug": "empowerment"
+  },
+  {
+    "title": "うちのエンジニアはなぜやる気がないの？全力で弁明します！！",
+    "description": "２ヶ月でチームの運用コストを半分以下にした方法をまとめていきます。",
+    "created": 1530889200000,
+    "tags": [
+      "エンジニア"
+    ],
+    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/dfb826ec3fd04c6c2d08cac94fd2ac6d.jpg",
+    "slug": "engineer-motivation"
   },
   {
     "title": "仕事で成功するための自分の強みの生かし方",
