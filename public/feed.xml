@@ -4,7 +4,7 @@
         <description><![CDATA[doralog]]></description>
         <link>https://dorarep.page</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 27 Sep 2020 09:48:56 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 27 Sep 2020 10:14:42 GMT</lastBuildDate>
         <atom:link href="https://dorarep.page/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[アトキンソンの『日本人の勝算』と、管内閣]]></title>
@@ -221,6 +221,13 @@
             <guid isPermaLink="false">cognitive-distortion</guid>
             <dc:creator><![CDATA[dorarep]]></dc:creator>
             <pubDate>Sun, 22 Jul 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[エンジニアのいう技術の進歩って何？エンジニア以外の人に説明！]]></title>
+            <link>https://dorarep.page/articles/technology</link>
+            <guid isPermaLink="false">technology</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Sat, 21 Jul 2018 15:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[うちのエンジニアはなぜやる気がないの？全力で弁明します！！]]></title>
