@@ -4,7 +4,7 @@
         <description><![CDATA[doralog]]></description>
         <link>https://dorarep.page</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 27 Sep 2020 10:14:42 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 01 Oct 2020 18:26:10 GMT</lastBuildDate>
         <atom:link href="https://dorarep.page/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[アトキンソンの『日本人の勝算』と、管内閣]]></title>
@@ -252,6 +252,14 @@
             <guid isPermaLink="false">psychological-safety</guid>
             <dc:creator><![CDATA[dorarep]]></dc:creator>
             <pubDate>Tue, 17 Jul 2018 15:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[２ヶ月でチームの運用コストを半分以下にした方法]]></title>
+            <description><![CDATA[定常作業のコスト削減をして、２ヶ月でチームの運用コストを半分以下にした方法を解説します。]]></description>
+            <link>https://dorarep.page/articles/cost-reduction</link>
+            <guid isPermaLink="false">cost-reduction</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Mon, 16 Jul 2018 15:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[行動を促すためのアイデンティティを活かした組織の作りかた]]></title>
