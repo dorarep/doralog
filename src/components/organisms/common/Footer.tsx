@@ -1,7 +1,9 @@
-export const Footer = () => (
+import { FC } from 'react'
+
+export const Footer: FC = () => (
   <>
     <footer>
-      <div className='container'>
+      <div className="container">
         <span>&copy; dorarep</span>
       </div>
     </footer>
@@ -23,4 +25,4 @@ export const Footer = () => (
       }
     `}</style>
   </>
-);
+)

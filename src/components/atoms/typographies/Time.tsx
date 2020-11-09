@@ -1,21 +1,19 @@
-import {FC} from "react";
-import fnsFormat from "date-fns/format";
+import { FC } from 'react'
+import fnsFormat from 'date-fns/format'
 
 type Props = {
-  date: Date;
-  format?: string;
+  date: Date
+  format?: string
 }
 
 export const Time: FC<Props> = ({ date, format = 'yyyy-MM-dd' }) => (
   <>
-    <time dateTime={date.toISOString()}>
-      {fnsFormat(date, format)}
-    </time>
+    <time dateTime={date.toISOString()}>{fnsFormat(date, format)}</time>
     <style jsx>{`
-        time {
-          color: var(--dark-gray);
-          font-size: 0.9rem;
-        }
-      `}</style>
+      time {
+        color: var(--dark-gray);
+        font-size: 0.9rem;
+      }
+    `}</style>
   </>
-);
+)

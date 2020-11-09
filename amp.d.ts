@@ -1,27 +1,21 @@
-// Any element you create will be accepted
 declare namespace JSX {
-  interface IntrinsicElements {
-    [elemName: string]: any;
-  }
-}
+  import { ReactNode } from 'react'
 
-// The elements you list here will be accepted, attributes don't matter
-declare namespace JSX {
-  interface IntrinsicElements {
-    'amp-img': any;
-  }
-}
-
-// The elements you list here will be accepted, and only with the attributes that you include here
-declare namespace JSX {
   interface AmpImg {
-    alt?: string;
-    src?: string;
-    width?: string;
-    height?: string;
-    layout?: string;
+    alt?: string
+    src?: string
+    width?: string
+    height?: string
+    layout?: string
+    className?: string
+  }
+  interface AmpAnalytics {
+    children?: ReactNode
+    type?: string
+    'data-credentials'?: string
   }
   interface IntrinsicElements {
-    'amp-img': AmpImg;
+    'amp-img': AmpImg
+    'amp-analytics': AmpAnalytics
   }
 }

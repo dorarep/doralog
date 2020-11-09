@@ -1,8 +1,8 @@
-import {FC} from "react";
+import { FC } from 'react'
 
 type Props = {
-  img: 'man1' | 'man2' | 'woman1';
-  direction: 'left' | 'right';
+  img: 'man1' | 'man2' | 'woman1'
+  direction: 'left' | 'right'
 }
 
 const Balloon: FC<Props> = ({ img, direction = 'left', children }) => {
@@ -10,12 +10,10 @@ const Balloon: FC<Props> = ({ img, direction = 'left', children }) => {
     <>
       <div className={`chat ${direction}`}>
         <div className="face">
-          <amp-img width='90' height='90' layout='fixed' src={`/faces/${img}.png`} />
+          <amp-img width="90" height="90" layout="fixed" src={`/faces/${img}.png`} />
         </div>
         <div className="balloon">
-          <div className="says">
-            {children}
-          </div>
+          <div className="says">{children}</div>
         </div>
       </div>
 
@@ -27,11 +25,11 @@ const Balloon: FC<Props> = ({ img, direction = 'left', children }) => {
         }
         .right {
           grid-template-columns: 1fr 90px;
-          grid-template-areas: "balloon face";
+          grid-template-areas: 'balloon face';
         }
         .left {
           grid-template-columns: 90px 1fr;
-          grid-template-areas: "face balloon";
+          grid-template-areas: 'face balloon';
         }
         .face {
           grid-area: face;
@@ -47,36 +45,36 @@ const Balloon: FC<Props> = ({ img, direction = 'left', children }) => {
           background-color: var(--light-gray);
         }
         .left .balloon:after {
-          content: "";
+          content: '';
           position: absolute;
-          top: calc(50% - 12px); 
+          top: calc(50% - 12px);
           left: -24px;
           border: 12px solid transparent;
           border-right: 12px solid var(--light-gray);
           z-index: 1;
         }
         .left .balloon:before {
-          content: "";
+          content: '';
           position: absolute;
-          top: calc(50% - 16px); 
+          top: calc(50% - 16px);
           left: -32px;
           border: 16px solid transparent;
           border-right: 16px solid var(--gray);
           z-index: 1;
         }
         .right .balloon:after {
-          content: "";
+          content: '';
           position: absolute;
-          top: calc(50% - 12px); 
+          top: calc(50% - 12px);
           right: -24px;
           border: 12px solid transparent;
           border-left: 12px solid var(--light-gray);
           z-index: 1;
         }
         .right .balloon:before {
-          content: "";
+          content: '';
           position: absolute;
-          top: calc(50% - 16px); 
+          top: calc(50% - 16px);
           right: -32px;
           border: 16px solid transparent;
           border-left: 16px solid var(--gray);
@@ -84,7 +82,7 @@ const Balloon: FC<Props> = ({ img, direction = 'left', children }) => {
         }
       `}</style>
     </>
-  );
-};
+  )
+}
 
-export default Balloon;
+export default Balloon

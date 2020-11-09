@@ -1,15 +1,13 @@
-import {FC} from "react";
+import { FC } from 'react'
 
 type Props = {
-  disable?: boolean;
+  disable?: boolean
 }
 
 export const Tag: FC<Props> = ({ children, disable }) => {
   return (
     <>
-      <a href={disable ? '' : `/tags/${children}`}>
-        {children}
-      </a>
+      <a href={disable ? '' : `/tags/${children}`}>{children}</a>
       <style jsx>{`
         a {
           height: 32px;
@@ -24,13 +22,13 @@ export const Tag: FC<Props> = ({ children, disable }) => {
           font-size: 16px;
           font-weight: bold;
           cursor: pointer;
-          transition:background-color 1s ease 0s;
+          transition: background-color 1s ease 0s;
           text-decoration: none;
         }
         a:hover {
-          background-color: var(--main-color)
+          background-color: var(--main-color);
         }
       `}</style>
     </>
-  );
-};
+  )
+}

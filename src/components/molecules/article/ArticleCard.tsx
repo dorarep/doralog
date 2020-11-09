@@ -1,17 +1,23 @@
-import {FC} from "react";
-import pages from "../../../../gen/pages.json";
+import { FC } from 'react'
+import pages from '../../../../gen/pages.json'
 
 type Props = {
-  slug: string;
+  slug: string
 }
 
 const Amazon: FC<Props> = ({ slug }) => {
-  const article = pages.find(page => page.slug === slug);
+  const article = pages.find((page) => page.slug === slug)
 
   return (
     <>
-      <a className="card" href={`/articles/${slug}`} target="_blank">
-        <amp-img layout="responsive" alt={article.title} width='560' height='315' src={article.thumbnail} />
+      <a className="card" href={`/articles/${slug}`} target="_blank" rel="noreferrer noopener">
+        <amp-img
+          layout="responsive"
+          alt={article.title}
+          width="560"
+          height="315"
+          src={article.thumbnail}
+        />
         <div className="body">
           <span className="label">関連記事</span>
           <div className="title">{article.title}</div>
@@ -35,7 +41,7 @@ const Amazon: FC<Props> = ({ slug }) => {
           margin-bottom: 2rem;
           padding: 1rem;
           box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
-          transition: .3s ease;
+          transition: 0.3s ease;
           display: grid;
           grid-template-columns: 1fr 2fr;
           color: var(--font-color);
@@ -59,8 +65,7 @@ const Amazon: FC<Props> = ({ slug }) => {
         }
       `}</style>
     </>
-  );
-};
+  )
+}
 
-export default Amazon;
-
+export default Amazon

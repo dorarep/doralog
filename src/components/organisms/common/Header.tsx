@@ -1,10 +1,11 @@
-import ssgConfig from "../../../../amdxg.config";
+import ssgConfig from '../../../../amdxg.config'
+import { FC } from 'react'
 
-export const Header = () => (
+export const Header: FC = () => (
   <>
     <header>
-      <div className='container'>
-        <a href='/'>{ssgConfig.siteName}</a>
+      <div className="container">
+        <a href="/">{ssgConfig.siteName}</a>
       </div>
     </header>
     <style jsx>{`
@@ -29,7 +30,9 @@ export const Header = () => (
         font-weight: bold;
       }
       @media screen and (max-width: 600px) {
-        span { display: none; }
+        span {
+          display: none;
+        }
       }
       a {
         color: white;
@@ -41,4 +44,4 @@ export const Header = () => (
       }
     `}</style>
   </>
-);
+)

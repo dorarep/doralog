@@ -1,37 +1,44 @@
-import products from "../../../../master/products.json";
-import {FC} from "react";
-import {LinkButton} from "../../atoms/buttons/Link";
+import products from '../../../../master/products.json'
+import { FC } from 'react'
+import { LinkButton } from '../../atoms/buttons/Link'
 
 type Props = {
-  productKey: string;
+  productKey: string
 }
 
 type Product = {
-  title: string;
-  shortTitle: string;
-  amazonUrl?: string;
-  kindleUrl?: string;
-  rakutenUrl?: string;
-  thumbnail?: string;
-  article?: string;
-  width: string;
-  height: string;
+  title: string
+  shortTitle: string
+  amazonUrl?: string
+  kindleUrl?: string
+  rakutenUrl?: string
+  thumbnail?: string
+  article?: string
+  width: string
+  height: string
 }
 
 const Amazon: FC<Props> = ({ productKey }) => {
-  const product: Product = products[productKey];
+  const product: Product = products[productKey]
 
   return (
     <>
       <div className="card">
-        <amp-img alt={product.title} src={product.thumbnail} width={product.width} height={product.height} />
+        <amp-img
+          alt={product.title}
+          src={product.thumbnail}
+          width={product.width}
+          height={product.height}
+        />
         <div className="body">
           <p>{product.title}</p>
           <div>
-            {product.amazonUrl && (<LinkButton href={product.amazonUrl}>Amazon</LinkButton>)}
-            {product.kindleUrl && (<LinkButton href={product.kindleUrl}>Kindle</LinkButton>)}
-            {product.rakutenUrl && (<LinkButton href={product.rakutenUrl}>楽天市場</LinkButton>)}
-            {product.article && (<LinkButton href={`/articles/${product.article}`}>読書感想文</LinkButton>)}
+            {product.amazonUrl && <LinkButton href={product.amazonUrl}>Amazon</LinkButton>}
+            {product.kindleUrl && <LinkButton href={product.kindleUrl}>Kindle</LinkButton>}
+            {product.rakutenUrl && <LinkButton href={product.rakutenUrl}>楽天市場</LinkButton>}
+            {product.article && (
+              <LinkButton href={`/articles/${product.article}`}>読書感想文</LinkButton>
+            )}
           </div>
         </div>
       </div>
@@ -42,7 +49,7 @@ const Amazon: FC<Props> = ({ productKey }) => {
           margin-bottom: 2rem;
           padding: 1rem;
           box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
-          transition: .3s ease;
+          transition: 0.3s ease;
           flex-wrap: wrap;
         }
         p {
@@ -56,8 +63,7 @@ const Amazon: FC<Props> = ({ productKey }) => {
         }
       `}</style>
     </>
-  );
-};
+  )
+}
 
-export default Amazon;
-
+export default Amazon

@@ -1,10 +1,8 @@
-import {FC} from "react";
+import { FC } from 'react'
 
 export const Body: FC = ({ children }) => (
   <>
-    <div>
-      {children}
-    </div>
+    <div>{children}</div>
     <style jsx>{`
       div {
         width: 100vw;
@@ -172,4 +170,4 @@ export const Body: FC = ({ children }) => (
       }
     `}</style>
   </>
-);
+)

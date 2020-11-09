@@ -1,16 +1,18 @@
-import {FC} from "react";
-import {Tag} from "../../atoms/Tag";
+import { FC } from 'react'
+import { Tag } from '../../atoms/Tag'
 
 type Props = {
-  tag: string;
-  similarTags: string[];
+  tag: string
+  similarTags: string[]
 }
 
 export const TagName: FC<Props> = ({ tag, similarTags }) => (
   <>
     <div>
       <h1>「{tag}」の記事一覧</h1>
-      {similarTags.map(similarTag => <Tag key={similarTag}>{similarTag}</Tag>)}
+      {similarTags.map((similarTag) => (
+        <Tag key={similarTag}>{similarTag}</Tag>
+      ))}
     </div>
     <style jsx>{`
       div {
