@@ -4,11 +4,12 @@ declare namespace JSX {
   interface AmpImg {
     alt?: string
     src?: string
-    width?: string
-    height?: string
+    width?: string | number
+    height?: string | number
     layout?: string
     srcset?: string
     className?: string
+    children?: ReactNode
   }
   interface AmpAnalytics {
     children?: ReactNode

@@ -1,5 +1,11 @@
 [
   {
+    "date": "Mon Nov 16 00:37:30 2020 +0900",
+    "hash": "d9a27e9",
+    "author": "dorarep",
+    "message": "feat: use sirv"
+  },
+  {
     "date": "Sun Sep 27 18:49:46 2020 +0900",
     "hash": "52ce5d9",
     "author": "dorarep",
