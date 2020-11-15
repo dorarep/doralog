@@ -7,6 +7,7 @@ declare namespace JSX {
     width?: string
     height?: string
     layout?: string
+    srcset?: string
     className?: string
   }
   interface AmpAnalytics {

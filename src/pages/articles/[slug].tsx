@@ -47,7 +47,7 @@ export const getStaticPaths: GetStaticPaths = async () => ({
 })
 
 export const getStaticProps: GetStaticProps = async (props) => {
-  const slug = props.params.slug
+  const slug = props.params?.slug
   const { default: Doc, toc, frontmatter } = await import(`../../../docs/${slug}.mdx`)
   const { default: history } = await import(`../../../gen/${slug}.history.json`)
 
@@ -116,7 +116,7 @@ const ArticlePage: NextPage<Props> = (props) => (
           title={props.frontmatter.title}
           thumbnail={props.frontmatter.thumbnail}
           created={props.frontmatter.created}
-          tags={props.frontmatter.tags}
+          tags={props.frontmatter.tags || []}
         >
           <div dangerouslySetInnerHTML={{ __html: props.html }} />
         </Article>

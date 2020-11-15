@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { Time } from '../../atoms/typographies/Time'
 import { Tag } from '../../atoms/Tag'
+import Img from '../../atoms/Img'
 
 type Props = {
   title: string
@@ -20,7 +21,7 @@ export const Article: FC<Props> = ({ children, title, thumbnail, created, tags }
       </div>
       <h1>{title}</h1>
       {thumbnail && (
-        <amp-img alt="thumbnail" layout="intrinsic" width="1120" height="630" src={thumbnail} />
+        <Img src={thumbnail} width={1120} height={630} layout="intrinsic" alt="thumbnail" />
       )}
       {children}
       <div className="tags">
@@ -30,11 +31,11 @@ export const Article: FC<Props> = ({ children, title, thumbnail, created, tags }
       </div>
       <hr />
       <div className="me">
-        <amp-img
+        <Img
           src="https://untraten.sirv.com/logo.png"
           layout="fixed"
-          width="80"
-          height="80"
+          width={80}
+          height={80}
           alt="logo"
         />
         <div>

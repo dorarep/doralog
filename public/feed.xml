@@ -4,7 +4,7 @@
         <description><![CDATA[doralog]]></description>
         <link>https://dorarep.page</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 09 Nov 2020 11:12:24 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 15 Nov 2020 15:37:04 GMT</lastBuildDate>
         <atom:link href="https://dorarep.page/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[アトキンソンの『日本人の勝算』と、管内閣]]></title>
@@ -213,13 +213,6 @@
             <guid isPermaLink="false">freelance</guid>
             <dc:creator><![CDATA[dorarep]]></dc:creator>
             <pubDate>Mon, 23 Jul 2018 15:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Chromeのショートカット]]></title>
-            <link>https://dorarep.page/articles/chrome</link>
-            <guid isPermaLink="false">chrome</guid>
-            <dc:creator><![CDATA[dorarep]]></dc:creator>
-            <pubDate>Sun, 22 Jul 2018 15:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[なんで意見が食い違うの？あなたの思い込みが論理的思考を腐らせる]]></title>

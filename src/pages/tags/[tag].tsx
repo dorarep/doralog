@@ -36,7 +36,7 @@ export const getStaticPaths: GetStaticPaths = async () => ({
 })
 
 export const getStaticProps: GetStaticProps = async (props) => {
-  const tag = props.params.tag as string
+  const tag = props.params?.tag as string
   const pages = (tagmap as TagMap)[tag]
   const tagCounts = pages
     .flatMap((page) => page.tags)

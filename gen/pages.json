@@ -68,7 +68,7 @@
       "目標設定",
       "評価"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2019/12/okr.png",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/okr.png",
     "slug": "okr"
   },
   {
@@ -81,7 +81,7 @@
       "Node.js",
       "JavaScript"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2019/12/nodejs.png",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/node-js.png",
     "slug": "node-js"
   },
   {
@@ -94,7 +94,7 @@
       "TypeScript",
       "JavaScript"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2019/12/72a00cd568035ab1be8943367978e58c.png",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/javascript-history.png",
     "slug": "javascript-history"
   },
   {
@@ -162,7 +162,7 @@
       "CUI",
       "GUI"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/11/fce5a4f6eccec22a1236f1b4a6f55eb8.png",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/cui-gui.png",
     "slug": "cui-gui"
   },
   {
@@ -174,7 +174,7 @@
       "カーネル",
       "UNIX"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2019/06/e279a3140e6c6beaf76901f247b84473.png",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/kernel.png",
     "slug": "kernel"
   },
   {
@@ -186,7 +186,7 @@
       "採用",
       "エンジニア"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2019/04/e3c9ef1475f2fa1aec947589789bcf82.png",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/changing-jobs.png",
     "slug": "changing-jobs"
   },
   {
@@ -197,7 +197,7 @@
       "組織",
       "マネジメント"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2019/02/cdfb3649062bee3054b23e1b5ad39058.png",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/fixed-role.png",
     "slug": "fixed-role"
   },
   {
@@ -208,7 +208,7 @@
       "リモートワーク",
       "モチベーション"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2019/01/ab09d74b05db94c9df011e75a5457c45.png",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/remote-work.png",
     "slug": "remote-work"
   },
   {
@@ -221,7 +221,7 @@
       "Ruby",
       "ActiveRecord"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/RubyOnRailsDependent.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/rails-dependent.jpg",
     "slug": "rails-dependent"
   },
   {
@@ -231,7 +231,7 @@
     "tags": [
       "統計"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/0d202a3a728c62857e6d6df88a06b9fe.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/statistics.jpg",
     "slug": "statistics"
   },
   {
@@ -241,7 +241,7 @@
     "tags": [
       "ゲーム"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/3314e1ff143c032a8dec4d33599e5d15.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/game-recommendation.jpg",
     "slug": "game-recommendation"
   },
   {
@@ -252,7 +252,7 @@
       "AI",
       "エンジニア"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/97c87e75597ae126e45141de6f7aa33c.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/programmer-ai.jpg",
     "slug": "programmer-to-ai"
   },
   {
@@ -263,7 +263,7 @@
       "面接",
       "採用"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/ac38ed05cc88df6cd0b7b3e45eb0828c.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/engineer-interview.jpg",
     "slug": "engineer-interview"
   },
   {
@@ -274,7 +274,7 @@
       "論理的思考",
       "ゲーム"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/86cf422fcc88f8754cb2b9de5e3b2a92.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/todai-game.jpg",
     "slug": "todai-game"
   },
   {
@@ -285,7 +285,7 @@
       "エンジニア",
       "キャリアパス"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/167a1766473e8bbf729bb80d997453e4.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/way-to-programmer.jpg",
     "slug": "way-to-programmer"
   },
   {
@@ -298,20 +298,8 @@
       "フリーランス",
       "正社員"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/ceae12dd573358e3b36e1f62f386bc4b.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/freelance.jpg",
     "slug": "freelance"
-  },
-  {
-    "title": "Chromeのショートカット",
-    "description": null,
-    "created": 1532271600000,
-    "tags": [
-      "感情",
-      "認知の歪み",
-      "論理的思考"
-    ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/979397f17a4bf30c7a79cd172b832341.jpg",
-    "slug": "chrome"
   },
   {
     "title": "なんで意見が食い違うの？あなたの思い込みが論理的思考を腐らせる",
@@ -322,7 +310,7 @@
       "認知の歪み",
       "論理的思考"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/979397f17a4bf30c7a79cd172b832341.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/cognitive-distortion.jpg",
     "slug": "cognitive-distortion"
   },
   {
@@ -332,7 +320,7 @@
     "tags": [
       "エンジニア"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/787caf5068dab7f2a373cae86a3f3358.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/technology.jpg",
     "slug": "technology"
   },
   {
@@ -342,7 +330,7 @@
     "tags": [
       "エンジニア"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/dfb826ec3fd04c6c2d08cac94fd2ac6d.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/engineer-motivation.jpg",
     "slug": "engineer-motivation"
   },
   {
@@ -354,7 +342,7 @@
       "プレゼン",
       "心理"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/story_telling.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/storytelling.jpg",
     "slug": "storytelling"
   },
   {
@@ -370,7 +358,7 @@
       "ティール組織",
       "心理"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/917360ad6fa7841d1ef08d2fdcbc4b75.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/psycological-safety.jpg",
     "slug": "psychological-safety"
   },
   {
@@ -380,7 +368,7 @@
     "tags": [
       "マネジメント"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/6a4703f14b9a41407b2e53b974355edc.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/cost-redution.jpg",
     "slug": "cost-reduction"
   },
   {
@@ -391,7 +379,7 @@
       "アイデンティティ",
       "組織"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/5ac31205f5096f37c8429cab318c93e3.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/identity.jpg",
     "slug": "identity"
   },
   {
@@ -405,7 +393,7 @@
       "評価",
       "組織"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/f895ba0c7dcce88dd4b8625ed2544148.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/motivate.jpg",
     "slug": "motivate"
   },
   {
@@ -418,7 +406,7 @@
       "承認",
       "権限移譲"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/08/18e9ef6d6f05034fa84d98d2a59f187e.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/empowerment.jpg",
     "slug": "empowerment"
   },
   {
@@ -428,7 +416,7 @@
     "tags": [
       "キャリアパス"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/09/d18a08f7b14335f2bc452c1e595f76d5.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/strength-finder.jpg",
     "slug": "strength-finder"
   },
   {
@@ -442,7 +430,7 @@
       "権限移譲",
       "感想"
     ],
-    "thumbnail": "https://storage.googleapis.com/stacky-health/2018/09/9bf6138549f3f767d1ecb3ca68cd111f.jpg",
+    "thumbnail": "https://untraten.sirv.com/thumbnails/information-gathering.jpg",
     "slug": "information-gathering"
   }
 ]
