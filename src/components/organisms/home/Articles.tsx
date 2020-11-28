@@ -11,10 +11,10 @@ type Props = {
 
 export const Articles: FC<Props> = ({ pages }) => (
   <>
-    <div>
+    <div className="wrapper">
       {pages.map((page) => (
         <a href={`/articles/${page.slug}`} key={page.slug}>
-          <article>
+          <article className="article">
             {page.thumbnail && (
               <Img
                 alt={page.title}
@@ -24,21 +24,32 @@ export const Articles: FC<Props> = ({ pages }) => (
                 src={page.thumbnail}
               />
             )}
+            <div className="article-title">{page.title}</div>
           </article>
         </a>
       ))}
     </div>
     <style jsx>{`
-      div {
+      .wrapper {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 2rem;
       }
-      article {
+      .article-title {
+        font-weight: bold;
+        color: var(--font-color);
+        padding: 0 0.5rem;
+        height: 68px;
+        overflow: hidden;
+      }
+      a {
+        text-decoration: none;
+      }
+      .article {
         box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
         transition: 0.3s ease;
       }
-      article:hover {
+      .article:hover {
         box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 0 0 5px rgba(0, 0, 0, 0.1);
         transform: translateY(-4px);
       }

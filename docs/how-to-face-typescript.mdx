@@ -19,6 +19,8 @@ TypeScriptはJavaScriptに静的型を追加した言語です。
 これらはTypeScriptが行う推論を、人間が上書きすることができるものです。
 つまりただエラーを消すことが目的化してしまうと、これらが多用され、推論が無効化されてしまいます。
 
+- [敗北者のTypeScript](https://qiita.com/uhyo/items/aae57ba0734e36ee846a)
+
 ## 型の正当性
 
 TypeScriptはコンパイルされ、最終的にJavaScriptとして実行されます。
@@ -102,7 +104,7 @@ const userName = useSelector((state: ({ user: { name: string } })) => state.user
 本当にどうしようもないケースもありますが、極力場当たり的に対応するのでなく、根元から型を修正したほうが良いでしょう。
 たとえば上記の例だと、`DefaultRootState`をoverloadすることで型指定が不要になります。
 
-[react-redux の Hooks API に Generics は要らない](https://qiita.com/Takepepe/items/6addcb1b0facb8c6ff1f)
+- [react-redux の Hooks API に Generics は要らない](https://qiita.com/Takepepe/items/6addcb1b0facb8c6ff1f)
 
 ## 外部からの入力
 
@@ -122,7 +124,7 @@ TypeScriptはあくまでコンパイル時に型チェックされるもので�
 そのため腐敗防止層を用意し、。
 そこで内部で使う型に変換すれば、外部の変更の影響は受けづらくなります。
 
-```
+```ts
 type UserResponse = { user_id: string; user_name?: string }
 type User = { id: number; userName: string }
 

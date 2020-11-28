@@ -1,5 +1,17 @@
 [
   {
+    "title": "TypeScriptとの向き合い方",
+    "description": "TypeScriptに振り回されず、道具としてうまく使う方法を提案します。",
+    "created": 1606562430743,
+    "tags": [
+      "TypeScript",
+      "JavaScript",
+      "フロントエンド"
+    ],
+    "thumbnail": "https://untraten.sirv.com/thumbnails/how-to-face-typescript.png",
+    "slug": "how-to-face-typescript"
+  },
+  {
     "title": "アトキンソンの『日本人の勝算』と、管内閣",
     "description": "管内閣の誕生に際し、『日本人の勝算』から日本の未来を占います。",
     "created": 1600756177460,
