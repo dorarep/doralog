@@ -1,5 +1,11 @@
 [
   {
+    "date": "Sat Nov 28 20:45:48 2020 +0900",
+    "hash": "8ed3ec8",
+    "author": "dorarep",
+    "message": "feat: add article title to article list"
+  },
+  {
     "date": "Sat Nov 28 20:20:42 2020 +0900",
     "hash": "3b15575",
     "author": "dorarep",
