@@ -46,8 +46,8 @@ export const getStaticPaths: GetStaticPaths = async () => ({
   fallback: false,
 })
 
-export const getStaticProps: GetStaticProps = async (props) => {
-  const slug = props.params?.slug
+export const getStaticProps: GetStaticProps = async (props): Promise<{ props: Props }> => {
+  const slug = props.params?.slug as string
   const { default: Doc, toc, frontmatter } = await import(`../../../docs/${slug}.mdx`)
   const { default: history } = await import(`../../../gen/${slug}.history.json`)
 
@@ -59,7 +59,7 @@ export const getStaticProps: GetStaticProps = async (props) => {
       tags: frontmatter?.tags || [],
       frontmatter: frontmatter || { title: slug, created: 0, tags: [] },
       html: ReactDOMServer.renderToStaticMarkup(<Doc amp />),
-    } as Props,
+    },
   }
 }
 

@@ -1,4 +1,5 @@
 const path = require('path');
+const ssgConfig = require('./amdxg.config.js');
 
 module.exports = {
   webpack(config) {
@@ -15,5 +16,8 @@ module.exports = {
       ],
     });
     return config;
+  },
+  amp: {
+    canonicalBase: ssgConfig.host
   },
 };

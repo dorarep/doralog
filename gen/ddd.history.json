@@ -1,5 +1,17 @@
 [
   {
+    "date": "Wed Dec 2 14:10:00 2020 +0900",
+    "hash": "62ad941",
+    "author": "dorarep",
+    "message": "fix: fix typo"
+  },
+  {
+    "date": "Mon Nov 30 11:35:32 2020 +0900",
+    "hash": "04128f1",
+    "author": "dorarep",
+    "message": "feat: add product link"
+  },
+  {
     "date": "Fri Nov 27 14:53:10 2020 +0900",
     "hash": "944f518",
     "author": "dorarep",

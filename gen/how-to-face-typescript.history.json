@@ -1,5 +1,11 @@
 [
   {
+    "date": "Wed Dec 2 14:10:00 2020 +0900",
+    "hash": "62ad941",
+    "author": "dorarep",
+    "message": "fix: fix typo"
+  },
+  {
     "date": "Sat Nov 28 20:45:48 2020 +0900",
     "hash": "8ed3ec8",
     "author": "dorarep",
