@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import Img from '../../atoms/Img'
+import Link from 'next/link';
 
 type Props = {
   pages: {
@@ -13,20 +14,22 @@ export const Articles: FC<Props> = ({ pages }) => (
   <>
     <div className="wrapper">
       {pages.map((page) => (
-        <a href={`/articles/${page.slug}`} key={page.slug}>
-          <article className="article">
-            {page.thumbnail && (
-              <Img
-                alt={page.title}
-                layout="responsive"
-                width={560}
-                height={315}
-                src={page.thumbnail}
-              />
-            )}
-            <div className="article-title">{page.title}</div>
-          </article>
-        </a>
+        <Link href={`/articles/${page.slug}`} key={page.slug}>
+          <a>
+            <article className="article">
+              {page.thumbnail && (
+                <Img
+                  alt={page.title}
+                  layout="responsive"
+                  width={560}
+                  height={315}
+                  src={page.thumbnail}
+                />
+              )}
+              <div className="article-title">{page.title}</div>
+            </article>
+          </a>
+        </Link>
       ))}
     </div>
     <style jsx>{`
