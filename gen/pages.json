@@ -1,5 +1,15 @@
 [
   {
+    "title": "業務委託で入って3ヶ月でやったこと",
+    "description": "自分自身の振り返りの意味も込めて、実際に契約を結んでからの3ヶ月に何を考えて何をしたのかをまとめていきたいと思います。",
+    "created": 1610150400000,
+    "tags": [
+      "振り返り"
+    ],
+    "thumbnail": "https://untraten.sirv.com/thumbnails/3month-report.png",
+    "slug": "3month_report"
+  },
+  {
     "title": "TypeScriptとの向き合い方",
     "description": "TypeScriptに振り回されず、道具としてうまく使う方法を提案します。",
     "created": 1606562430743,

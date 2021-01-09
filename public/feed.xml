@@ -4,8 +4,16 @@
         <description><![CDATA[doralog]]></description>
         <link>https://dorarep.page</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 29 Dec 2020 10:26:47 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 09 Jan 2021 09:42:16 GMT</lastBuildDate>
         <atom:link href="https://dorarep.page/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[業務委託で入って3ヶ月でやったこと]]></title>
+            <description><![CDATA[自分自身の振り返りの意味も込めて、実際に契約を結んでからの3ヶ月に何を考えて何をしたのかをまとめていきたいと思います。]]></description>
+            <link>https://dorarep.page/articles/3month_report</link>
+            <guid isPermaLink="false">3month_report</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Sat, 09 Jan 2021 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[TypeScriptとの向き合い方]]></title>
             <description><![CDATA[TypeScriptに振り回されず、道具としてうまく使う方法を提案します。]]></description>
