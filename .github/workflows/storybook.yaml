@@ -24,8 +24,8 @@ jobs:
         run: yarn
       - name: Build storybook
         run: yarn build-storybook
-      - name: Upload storybook
-        uses: actions/upload-artifact@v2
+      - name: Deploy storybook
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: storybook
-          path: storybook-static/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./storybook-static/
