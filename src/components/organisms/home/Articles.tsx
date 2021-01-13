@@ -24,6 +24,7 @@ export const Articles: FC<Props> = ({ pages }) => (
                   width={560}
                   height={315}
                   src={page.thumbnail}
+                  widthSet={[320, 560]}
                 />
               )}
             </article>

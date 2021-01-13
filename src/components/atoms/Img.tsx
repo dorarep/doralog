@@ -6,26 +6,27 @@ type Props = {
   height: number
   layout?: string
   alt: string
+  widthSet?: number[]
 }
 
-const Img: FC<Props> = ({ src, layout = 'responsive', ...props }) => (
-  <>
-    <amp-img
-      src={`${src}?format=webp`}
-      srcset={`${src}?w=320&format=webp 320w, ${src}?w=640&format=webp 640w, ${src}?w=960&format=webp 960w`}
-      layout={layout}
-      {...props}
-    >
-      <div {...{ fallback: 'fallback' }}>
-        <amp-img
-          src={src}
-          srcset={`${src}?w=320 320w, ${src}?w=640 640w, ${src}?w=960 960w`}
-          layout={layout}
-          {...props}
-        />
-      </div>
-    </amp-img>
-  </>
-)
+const Img: FC<Props> = ({ src, widthSet, layout = 'responsive', ...props }) => {
+  const srcSet = (subParam: string) =>
+    widthSet ? widthSet.map((w) => `${src}?w=${w}${subParam} ${w}w`).join(', ') : undefined
+
+  return (
+    <>
+      <amp-img
+        src={`${src}?format=webp`}
+        srcset={srcSet('&format=webp')}
+        layout={layout}
+        {...props}
+      >
+        <div {...{ fallback: 'fallback' }}>
+          <amp-img src={src} srcset={srcSet('')} layout={layout} {...props} />
+        </div>
+      </amp-img>
+    </>
+  )
+}
 
 export default Img

@@ -17,34 +17,18 @@ type Props = {
 }
 
 export const ArticlesShowTemplate: FC<Props> = (props) => (
-  <>
-    <SingleColumn>
-      <Header />
-      <Main>
-        <div className="wrapper">
-          <article>
-            <Article
-              title={props.frontmatter.title}
-              thumbnail={props.frontmatter.thumbnail}
-              created={props.frontmatter.created}
-              tags={props.frontmatter.tags || []}
-            >
-              <div dangerouslySetInnerHTML={{ __html: props.html }} />
-            </Article>
-          </article>
-        </div>
-      </Main>
-      <Footer />
-    </SingleColumn>
-    <style jsx>{`
-      .wrapper {
-        display: flex;
-      }
-      article {
-        max-width: var(--content-width);
-        background-color: white;
-        padding: 1rem;
-      }
-    `}</style>
-  </>
+  <SingleColumn>
+    <Header />
+    <Main>
+      <Article
+        title={props.frontmatter.title}
+        thumbnail={props.frontmatter.thumbnail}
+        created={props.frontmatter.created}
+        tags={props.frontmatter.tags || []}
+      >
+        <div dangerouslySetInnerHTML={{ __html: props.html }} />
+      </Article>
+    </Main>
+    <Footer />
+  </SingleColumn>
 )

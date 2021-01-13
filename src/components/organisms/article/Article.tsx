@@ -12,7 +12,7 @@ type Props = {
 
 export const Article: FC<Props> = ({ children, title, thumbnail, created, tags }) => (
   <>
-    <>
+    <article>
       <Time timestamp={created} />
       <div className="tags">
         {tags.map((tag) => (
@@ -21,7 +21,14 @@ export const Article: FC<Props> = ({ children, title, thumbnail, created, tags }
       </div>
       <h1>{title}</h1>
       {thumbnail && (
-        <Img src={thumbnail} width={1120} height={630} layout="intrinsic" alt="thumbnail" />
+        <Img
+          src={thumbnail}
+          widthSet={[320, 640, 1120]}
+          width={1120}
+          height={630}
+          layout="intrinsic"
+          alt="thumbnail"
+        />
       )}
       {children}
       <div className="tags">
@@ -45,11 +52,9 @@ export const Article: FC<Props> = ({ children, title, thumbnail, created, tags }
           </div>
         </div>
       </div>
-    </>
+    </article>
     <style jsx>{`
       article {
-        width: 100%;
-        max-width: 900px;
         background-color: white;
         padding: 1rem;
       }
