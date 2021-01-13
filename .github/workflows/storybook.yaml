@@ -1,0 +1,31 @@
+name: Build storybook
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '15.x'
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: Install dependencies
+        run: yarn
+      - name: Build storybook
+        run: yarn build-storybook
+      - name: Upload storybook
+        uses: actions/upload-artifact@v2
+        with:
+          name: storybook
+          path: storybook-static/
