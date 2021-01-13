@@ -1,5 +1,11 @@
 [
   {
+    "date": "Thu Jan 14 03:24:57 2021 +0900",
+    "hash": "26a865d",
+    "author": "dorarep",
+    "message": "chore: format some codes"
+  },
+  {
     "date": "Sat Jan 9 18:41:13 2021 +0900",
     "hash": "46e96de",
     "author": "dorarep",

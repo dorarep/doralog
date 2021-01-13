@@ -13,7 +13,7 @@ type Props = {
 export const Article: FC<Props> = ({ children, title, thumbnail, created, tags }) => (
   <>
     <article>
-      <Time date={new Date(created)} />
+      <Time timestamp={created} />
       <div className="tags">
         {tags.map((tag) => (
           <Tag key={tag}>{tag}</Tag>
@@ -47,30 +47,30 @@ export const Article: FC<Props> = ({ children, title, thumbnail, created, tags }
       </div>
     </article>
     <style jsx>{`
-        article {
-          width: 100vw:
-          max-width: 900px;
-          background-color: white;
-          padding: 1rem;
-        }
-        .tags {
-          display: flex;
-          flex-wrap: wrap;
-        }
-        .me {
-          display: flex;
-          flex-wrap: wrap;
-        }
-        .me a {
-          text-decoration: none;
-          color: var(--dark-main-color);
-        }
-        h1 {
-          font-size: 1.5rem;
-          line-height: 2.3rem;
-          margin-bottom: 1rem;
-        }
-      `}</style>
+      article {
+        width: 100%;
+        max-width: 900px;
+        background-color: white;
+        padding: 1rem;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .me {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .me a {
+        text-decoration: none;
+        color: var(--dark-main-color);
+      }
+      h1 {
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        margin-bottom: 1rem;
+      }
+    `}</style>
     <style jsx global>{`
       .markdown-body:first-child {
         visibility: hidden;
@@ -91,7 +91,6 @@ export const Article: FC<Props> = ({ children, title, thumbnail, created, tags }
       h3 {
         font-size: 1.5rem;
         line-height: 2rem;
-        padding: 4px 8px;
         padding-top: 0;
         margin-top: 3rem;
         margin-bottom: 2rem;

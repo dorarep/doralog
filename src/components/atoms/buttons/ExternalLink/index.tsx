@@ -4,7 +4,7 @@ type Props = {
   href: string
 }
 
-export const LinkButton: FC<Props> = ({ href, children }) => (
+export const ExternalLink: FC<Props> = ({ href, children }) => (
   <>
     <a href={href} rel="noreferrer noopener" target="_blank">
       {children}

@@ -1,13 +1,12 @@
 import { FC } from 'react'
+import Link from 'next/link'
 
-type Props = {
-  disable?: boolean
-}
-
-export const Tag: FC<Props> = ({ children, disable }) => {
+export const Tag: FC = ({ children }) => {
   return (
     <>
-      <a href={disable ? '' : `/tags/${children}`}>{children}</a>
+      <Link href={`/tags/${children}`}>
+        <a>{children}</a>
+      </Link>
       <style jsx>{`
         a {
           height: 32px;

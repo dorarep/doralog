@@ -31,7 +31,6 @@ const IndexPage: NextPage = () => (
             <p className="description">Full-stack web developer</p>
             <Tag>TypeScript</Tag>
             <Tag>Ruby</Tag>
-            <Tag disable>PHP</Tag>
             <Tag>インフラ</Tag>
             <Tag>組織</Tag>
           </div>

@@ -1,6 +1,6 @@
 import products from '../../../../master/products.json'
 import { FC } from 'react'
-import { LinkButton } from '../../atoms/buttons/Link'
+import { ExternalLink } from '../../atoms/buttons/ExternalLink'
 
 type Props = {
   productKey: string
@@ -33,11 +33,11 @@ const Amazon: FC<Props> = ({ productKey }) => {
         <div className="body">
           <p>{product.title}</p>
           <div>
-            {product.amazonUrl && <LinkButton href={product.amazonUrl}>Amazon</LinkButton>}
-            {product.kindleUrl && <LinkButton href={product.kindleUrl}>Kindle</LinkButton>}
-            {product.rakutenUrl && <LinkButton href={product.rakutenUrl}>楽天市場</LinkButton>}
+            {product.amazonUrl && <ExternalLink href={product.amazonUrl}>Amazon</ExternalLink>}
+            {product.kindleUrl && <ExternalLink href={product.kindleUrl}>Kindle</ExternalLink>}
+            {product.rakutenUrl && <ExternalLink href={product.rakutenUrl}>楽天市場</ExternalLink>}
             {product.article && (
-              <LinkButton href={`/articles/${product.article}`}>読書感想文</LinkButton>
+              <ExternalLink href={`/articles/${product.article}`}>読書感想文</ExternalLink>
             )}
           </div>
         </div>
