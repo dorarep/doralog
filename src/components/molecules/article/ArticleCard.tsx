@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import pages from '../../../../gen/pages.json'
+
+import pages from '~/gen/pages.json'
 
 type Props = {
   slug: string

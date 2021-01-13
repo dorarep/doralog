@@ -1,10 +1,11 @@
-import {FC} from "react";
-import {SingleColumn} from "../../atoms/layouts/SingleColumn";
-import {Header} from "../../organisms/common/Header";
-import {Main} from "../../atoms/layouts/Main";
-import {Footer} from "../../organisms/common/Footer";
-import {TagName} from "../../organisms/tags/TagName";
-import {Articles} from "../../organisms/home/Articles";
+import { FC } from 'react'
+
+import { Main } from '@/atoms/layouts/Main'
+import { SingleColumn } from '@/atoms/layouts/SingleColumn'
+import { Footer } from '@/organisms/common/Footer'
+import { Header } from '@/organisms/common/Header'
+import { Articles } from '@/organisms/home/Articles'
+import { TagName } from '@/organisms/tags/TagName'
 
 type Pages = {
   title: string

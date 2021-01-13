@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
 import Prism from 'prismjs'
 import * as loadLanguages from 'prismjs/components/index'
+import React, { FC } from 'react'
 
 loadLanguages(['ruby'])
 

@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import links from '../../../../master/links.json'
+
+import links from '~/master/links.json'
 
 type Props = {
   slug: string

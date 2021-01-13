@@ -1,5 +1,6 @@
-import { Time } from './index'
 import { ComponentProps } from 'react'
+
+import { Time } from './index'
 
 export default {
   title: 'typographies/Time',

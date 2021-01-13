@@ -1,6 +1,7 @@
-import { FC } from 'react'
-import Img from '../../atoms/Img'
 import Link from 'next/link'
+import { FC } from 'react'
+
+import Img from '@/atoms/Img'
 
 type Props = {
   pages: {

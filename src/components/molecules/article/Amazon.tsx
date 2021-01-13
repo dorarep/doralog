@@ -1,6 +1,7 @@
-import products from '../../../../master/products.json'
 import { FC } from 'react'
-import { ExternalLink } from '../../atoms/buttons/ExternalLink'
+
+import { ExternalLink } from '@/atoms/buttons/ExternalLink'
+import products from '~/master/products.json'
 
 type Props = {
   productKey: string

@@ -1,5 +1,6 @@
-import { ExternalLink } from './index'
 import { ComponentProps } from 'react'
+
+import { ExternalLink } from './index'
 
 export default {
   title: 'buttons/ExternalLink',

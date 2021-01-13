@@ -1,5 +1,6 @@
-import { Main } from './index'
 import { ComponentProps } from 'react'
+
+import { Main } from './index'
 
 export default {
   title: 'layouts/Main',

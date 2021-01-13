@@ -1,5 +1,5 @@
-import { FC } from 'react'
 import fnsFormat from 'date-fns/format'
+import { FC } from 'react'
 
 type Props = {
   timestamp: number

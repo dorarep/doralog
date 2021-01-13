@@ -1,6 +1,7 @@
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 import React from 'react'
-import Document, { Html, Head, Main, NextScript } from 'next/document'
-import ssgConfig from '../../amdxg.config'
+
+import ssgConfig from '~/amdxg.config'
 
 export default class extends Document {
   render(): JSX.Element {

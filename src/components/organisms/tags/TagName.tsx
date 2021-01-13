@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { Tag } from '../../atoms/Tag'
+
+import { Tag } from '@/atoms/Tag'
 
 type Props = {
   tag: string

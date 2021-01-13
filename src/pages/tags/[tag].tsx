@@ -1,8 +1,9 @@
-import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps, NextPage, PageConfig } from 'next'
-import tagmap from '../../../gen/tagmap.json'
-import ssgConfig from '../../../amdxg.config'
-import { TagsShowTemplate } from '../../components/templates/tags/show'
+import Head from 'next/head'
+
+import { TagsShowTemplate } from '@/templates/tags/show'
+import ssgConfig from '~/amdxg.config'
+import tagmap from '~/gen/tagmap.json'
 
 type Pages = {
   title: string

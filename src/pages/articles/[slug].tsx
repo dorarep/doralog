@@ -1,9 +1,10 @@
-import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps, NextPage, PageConfig } from 'next'
+import Head from 'next/head'
 import ReactDOMServer from 'react-dom/server'
-import pages from '../../../gen/pages.json'
-import ssgConfig from '../../../amdxg.config'
-import { ArticlesShowTemplate } from '../../components/templates/articles/show'
+
+import { ArticlesShowTemplate } from '@/templates/articles/show'
+import ssgConfig from '~/amdxg.config'
+import pages from '~/gen/pages.json'
 
 type Toc = {
   depth: number

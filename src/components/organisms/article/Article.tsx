@@ -1,7 +1,8 @@
 import { FC } from 'react'
-import { Time } from '../../atoms/typographies/Time'
-import { Tag } from '../../atoms/Tag'
-import Img from '../../atoms/Img'
+
+import Img from '@/atoms/Img'
+import { Tag } from '@/atoms/Tag'
+import { Time } from '@/atoms/typographies/Time'
 
 type Props = {
   title: string

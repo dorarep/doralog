@@ -1,11 +1,13 @@
-import Head from 'next/head'
-import { SingleColumn } from '../components/atoms/layouts/SingleColumn'
 import { NextPage, PageConfig } from 'next'
+import Head from 'next/head'
+
+import { Main } from '@/atoms/layouts/Main'
+import { SingleColumn } from '@/atoms/layouts/SingleColumn'
+import { Tag } from '@/atoms/Tag'
+import { Footer } from '@/organisms/common/Footer'
+import { Header } from '@/organisms/common/Header'
+
 import ssgConfig from '../../amdxg.config'
-import { Header } from '../components/organisms/common/Header'
-import { Main } from '../components/atoms/layouts/Main'
-import { Footer } from '../components/organisms/common/Footer'
-import { Tag } from '../components/atoms/Tag'
 
 export const config: PageConfig = {
   amp: true,

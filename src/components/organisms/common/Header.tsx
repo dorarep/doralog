@@ -1,5 +1,6 @@
-import ssgConfig from '../../../../amdxg.config'
 import { FC } from 'react'
+
+import ssgConfig from '~/amdxg.config'
 
 export const Header: FC = () => (
   <>

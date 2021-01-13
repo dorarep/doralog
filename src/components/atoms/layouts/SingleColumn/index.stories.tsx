@@ -1,5 +1,6 @@
-import { SingleColumn } from './index'
 import { ComponentProps } from 'react'
+
+import { SingleColumn } from './index'
 
 export default {
   title: 'layouts/SingleColumn',

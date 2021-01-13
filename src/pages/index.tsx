@@ -1,12 +1,13 @@
-import Head from 'next/head'
-import { SingleColumn } from '../components/atoms/layouts/SingleColumn'
 import { GetStaticProps, NextPage, PageConfig } from 'next'
-import tagmap from '../../gen/tagmap.json'
-import ssgConfig from '../../amdxg.config'
-import { Header } from '../components/organisms/common/Header'
-import { Main } from '../components/atoms/layouts/Main'
-import { Articles } from '../components/organisms/home/Articles'
-import { Footer } from '../components/organisms/common/Footer'
+import Head from 'next/head'
+
+import { Main } from '@/atoms/layouts/Main'
+import { SingleColumn } from '@/atoms/layouts/SingleColumn'
+import { Footer } from '@/organisms/common/Footer'
+import { Header } from '@/organisms/common/Header'
+import { Articles } from '@/organisms/home/Articles'
+import ssgConfig from '~/amdxg.config'
+import tagmap from '~/gen/tagmap.json'
 
 type Props = {
   pages: {

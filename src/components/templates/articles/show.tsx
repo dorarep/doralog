@@ -1,9 +1,10 @@
-import {FC} from "react";
-import {SingleColumn} from "../../atoms/layouts/SingleColumn";
-import {Header} from "../../organisms/common/Header";
-import {Main} from "../../atoms/layouts/Main";
-import {Article} from "../../organisms/article/Article";
-import {Footer} from "../../organisms/common/Footer";
+import { FC } from 'react'
+
+import { Main } from '@/atoms/layouts/Main'
+import { SingleColumn } from '@/atoms/layouts/SingleColumn'
+import { Article } from '@/organisms/article/Article'
+import { Footer } from '@/organisms/common/Footer'
+import { Header } from '@/organisms/common/Header'
 
 type Props = {
   frontmatter: {
