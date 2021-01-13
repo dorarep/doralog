@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Body } from '../components/atoms/layouts/Body'
+import { SingleColumn } from '../components/atoms/layouts/SingleColumn'
 import { GetStaticProps, NextPage, PageConfig } from 'next'
 import tagmap from '../../gen/tagmap.json'
 import ssgConfig from '../../amdxg.config'
@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 const IndexPage: NextPage<Props> = ({ pages }) => (
-  <Body>
+  <SingleColumn>
     <Head>
       <title>{ssgConfig.siteName}</title>
     </Head>
@@ -44,7 +44,7 @@ const IndexPage: NextPage<Props> = ({ pages }) => (
       <Articles pages={pages} />
     </Main>
     <Footer />
-  </Body>
+  </SingleColumn>
 )
 
 export default IndexPage

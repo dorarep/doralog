@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Body } from '../components/atoms/layouts/Body'
+import { SingleColumn } from '../components/atoms/layouts/SingleColumn'
 import { NextPage, PageConfig } from 'next'
 import ssgConfig from '../../amdxg.config'
 import { Header } from '../components/organisms/common/Header'
@@ -13,7 +13,7 @@ export const config: PageConfig = {
 
 const IndexPage: NextPage = () => (
   <>
-    <Body>
+    <SingleColumn>
       <Head>
         <title>About me - {ssgConfig.siteName}</title>
       </Head>
@@ -45,7 +45,7 @@ const IndexPage: NextPage = () => (
         </div>
       </Main>
       <Footer />
-    </Body>
+    </SingleColumn>
     <style jsx>{`
       .hero {
         background-color: white;

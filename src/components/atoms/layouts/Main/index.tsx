@@ -7,7 +7,7 @@ export const Main: FC = ({ children }) => (
       main {
         width: 100%;
         height: 100%;
-        max-width: 900px;
+        max-width: var(--content-width);
         margin-right: auto;
         margin-left: auto;
       }

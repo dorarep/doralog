@@ -1,13 +1,8 @@
 import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps, NextPage, PageConfig } from 'next'
 import tagmap from '../../../gen/tagmap.json'
-import { Body } from '../../components/atoms/layouts/Body'
 import ssgConfig from '../../../amdxg.config'
-import { Main } from '../../components/atoms/layouts/Main'
-import { Header } from '../../components/organisms/common/Header'
-import { Footer } from '../../components/organisms/common/Footer'
-import { Articles } from '../../components/organisms/home/Articles'
-import { TagName } from '../../components/organisms/tags/TagName'
+import { TagsShowTemplate } from '../../components/templates/tags/show'
 
 type Pages = {
   title: string
@@ -60,19 +55,14 @@ export const getStaticProps: GetStaticProps = async (props) => {
 }
 
 const TagPage: NextPage<Props> = ({ tag, similarTags, pages }) => (
-  <Body>
+  <>
     <Head>
       <title>
         {tag} - {ssgConfig.siteName}
       </title>
     </Head>
-    <Header />
-    <Main>
-      <TagName tag={tag} similarTags={similarTags} />
-      <Articles pages={pages} />
-    </Main>
-    <Footer />
-  </Body>
+    <TagsShowTemplate tag={tag} similarTags={similarTags} pages={pages} />
+  </>
 )
 
 export default TagPage

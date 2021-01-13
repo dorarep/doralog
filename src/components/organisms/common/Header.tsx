@@ -18,7 +18,7 @@ export const Header: FC = () => (
       .container {
         margin: 0 auto;
         height: 100%;
-        max-width: 900px;
+        max-width: var(--content-width);
         padding: 0 1rem;
         display: flex;
         align-items: center;

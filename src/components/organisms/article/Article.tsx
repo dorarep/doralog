@@ -12,7 +12,7 @@ type Props = {
 
 export const Article: FC<Props> = ({ children, title, thumbnail, created, tags }) => (
   <>
-    <article>
+    <>
       <Time timestamp={created} />
       <div className="tags">
         {tags.map((tag) => (
@@ -45,7 +45,7 @@ export const Article: FC<Props> = ({ children, title, thumbnail, created, tags }
           </div>
         </div>
       </div>
-    </article>
+    </>
     <style jsx>{`
       article {
         width: 100%;
@@ -183,6 +183,75 @@ export const Article: FC<Props> = ({ children, title, thumbnail, created, tags }
       table thead tr {
         background-color: var(--dark-main-color);
         color: #fff;
+      }
+      .token.comment,
+      .token.prolog,
+      .token.doctype,
+      .token.cdata {
+        color: #d4d0ab;
+      }
+      .token.punctuation {
+        color: #fefefe;
+      }
+      .token.property,
+      .token.tag,
+      .token.constant,
+      .token.symbol,
+      .token.deleted {
+        color: #ffa07a;
+      }
+      .token.boolean,
+      .token.number {
+        color: #00e0e0;
+      }
+      .token.selector,
+      .token.attr-name,
+      .token.string,
+      .token.char,
+      .token.builtin,
+      .token.inserted {
+        color: #abe338;
+      }
+      .token.operator,
+      .token.entity,
+      .token.url,
+      .language-css .token.string,
+      .style .token.string,
+      .token.variable {
+        color: #00e0e0;
+      }
+      .token.atrule,
+      .token.attr-value,
+      .token.function {
+        color: #ffd700;
+      }
+      .token.keyword {
+        color: #00e0e0;
+      }
+      .token.regex,
+      .token.important {
+        color: #ffd700;
+      }
+      .token.important,
+      .token.bold {
+        font-weight: bold;
+      }
+      .token.italic {
+        font-style: italic;
+      }
+      .token.entity {
+        cursor: help;
+      }
+      code {
+        border-radius: 0.3em;
+        background-color: #eee;
+        padding: 0.1em 0.4em;
+        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      }
+      pre code {
+        background: #333;
+        color: #f8f8f2;
+        padding: 0;
       }
     `}</style>
   </>

@@ -3,11 +3,7 @@ import { GetStaticPaths, GetStaticProps, NextPage, PageConfig } from 'next'
 import ReactDOMServer from 'react-dom/server'
 import pages from '../../../gen/pages.json'
 import ssgConfig from '../../../amdxg.config'
-import { Body } from '../../components/atoms/layouts/Body'
-import { Article } from '../../components/organisms/article/Article'
-import { Main } from '../../components/atoms/layouts/Main'
-import { Header } from '../../components/organisms/common/Header'
-import { Footer } from '../../components/organisms/common/Footer'
+import { ArticlesShowTemplate } from '../../components/templates/articles/show'
 
 type Toc = {
   depth: number
@@ -33,7 +29,6 @@ type Props = {
     tags?: string[]
     thumbnail?: string
   }
-  tags: string[]
   html: string
 }
 
@@ -56,7 +51,6 @@ export const getStaticProps: GetStaticProps = async (props): Promise<{ props: Pr
       slug,
       toc,
       history,
-      tags: frontmatter?.tags || [],
       frontmatter: frontmatter || { title: slug, created: 0, tags: [] },
       html: ReactDOMServer.renderToStaticMarkup(<Doc amp />),
     },
@@ -109,20 +103,7 @@ const ArticlePage: NextPage<Props> = (props) => (
         dangerouslySetInnerHTML={{ __html: JSON.stringify(makeStructuredData(props)) }}
       />
     </Head>
-    <Body>
-      <Header />
-      <Main>
-        <Article
-          title={props.frontmatter.title}
-          thumbnail={props.frontmatter.thumbnail}
-          created={props.frontmatter.created}
-          tags={props.frontmatter.tags || []}
-        >
-          <div dangerouslySetInnerHTML={{ __html: props.html }} />
-        </Article>
-      </Main>
-      <Footer />
-    </Body>
+    <ArticlesShowTemplate frontmatter={props.frontmatter} html={props.html} />
   </>
 )
 
