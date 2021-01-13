@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import Img from '../../atoms/Img'
-import Link from 'next/link';
+import Link from 'next/link'
 
 type Props = {
   pages: {
@@ -26,8 +26,8 @@ export const Articles: FC<Props> = ({ pages }) => (
                   src={page.thumbnail}
                 />
               )}
-              <div className="article-title">{page.title}</div>
             </article>
+            <div className="article-title">{page.title}</div>
           </a>
         </Link>
       ))}

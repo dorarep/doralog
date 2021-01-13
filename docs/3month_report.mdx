@@ -105,8 +105,7 @@ useSelector((state: { user: { auth: { token: string }}}) => state.user.auth.toke
 
 課題感としては以下の通りです。
 
-- Global CSSに色々な定義が入った上で、CSS Modulesが色々なComponentから参照していた。
-  - 一つの変更の影響箇所が大きく、UIが壊れやすかった。
+- Global CSSが肥大かつCSS ModuleとComponentの対応関係が複雑で、UIが壊れやすかった。
 - 歴史的に色々な外部のデザイナーが設計していたらしく、UIが統一されていなかった。
 
 ### 方針の策定
