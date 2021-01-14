@@ -7,7 +7,7 @@ import { Tag } from '@/atoms/Tag'
 import { Footer } from '@/organisms/common/Footer'
 import { Header } from '@/organisms/common/Header'
 
-import ssgConfig from '../../amdxg.config'
+import ssgConfig from '~/amdxg.config'
 
 export const config: PageConfig = {
   amp: true,

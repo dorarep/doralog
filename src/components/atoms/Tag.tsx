@@ -21,7 +21,7 @@ export const Tag: FC = ({ children }) => {
           font-size: 16px;
           font-weight: bold;
           cursor: pointer;
-          transition: background-color 1s ease 0s;
+          transition: background-color 0.3s ease 0s;
           text-decoration: none;
         }
         a:hover {
