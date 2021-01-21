@@ -98,6 +98,25 @@ useSelector((state: { user: { auth: { token: string }}}) => state.user.auth.toke
 
 一緒に入ったredux-devtoolsもDX向上に大きく貢献します。
 
+### テスト/storybook用のfactoryの作成
+テストやStorybookで使うオブジェクトがそれぞれ個別に定義されていて、型定義が変更されると様々な箇所で型エラーになる状況にありました。
+
+またパラメータが多かったりネストしてる場合にテスト用のオブジェクトの生成が面倒で、そもそもテストされないようなケースも見られました。
+
+そのため簡単なfactoryメソッドを用意して、型定義通りの簡単に生成できるようにしました。
+
+```ts
+export const makeUser = (user: User) => ({
+  name: "太郎",
+  age: 20,
+  ...user
+})
+```
+
+特にRedux Storeの挙動は今まで個別にMockされており、後からStoreの定義が変わった際にもテストがその変更に追随できない状況にありました。
+
+しかしこれで目的に合わせたStoreの状態を簡単に生成できるようになり、Storeも含めたテストもやりやすくなりました。
+
 ## Style周りの問題
 
 Style周りの課題感としては以下の通りです。
