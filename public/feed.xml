@@ -4,8 +4,16 @@
         <description><![CDATA[doralog]]></description>
         <link>https://dorarep.page</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 21 Jan 2021 09:13:31 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 13 Mar 2021 08:40:46 GMT</lastBuildDate>
         <atom:link href="https://dorarep.page/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[そのマイクロサービスは正解なのか？]]></title>
+            <description><![CDATA[どのようなときにマイクロサービス化を進めれば良いのか、判断基準をまとめていきます。]]></description>
+            <link>https://dorarep.page/articles/microservices</link>
+            <guid isPermaLink="false">microservices</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Sat, 13 Mar 2021 08:35:27 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[業務委託で入って3ヶ月でやったこと]]></title>
             <description><![CDATA[自分自身の振り返りの意味も込めて、実際に契約を結んでからの3ヶ月に何を考えて何をしたのかをまとめていきたいと思います。]]></description>
