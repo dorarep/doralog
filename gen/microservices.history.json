@@ -1,5 +1,11 @@
 [
   {
+    "date": "Sat Mar 13 18:00:32 2021 +0900",
+    "hash": "104f728",
+    "author": "dorarep",
+    "message": "fix: fix link"
+  },
+  {
     "date": "Sat Mar 13 17:40:54 2021 +0900",
     "hash": "370a0c1",
     "author": "dorarep",
