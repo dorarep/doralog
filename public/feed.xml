@@ -4,8 +4,16 @@
         <description><![CDATA[doralog]]></description>
         <link>https://dorarep.page</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 13 Mar 2021 09:45:53 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 23 Mar 2021 06:32:01 GMT</lastBuildDate>
         <atom:link href="https://dorarep.page/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[指摘をしても心理的安全性が乱れない環境は？]]></title>
+            <description><![CDATA[気兼ねなく指摘できる環境を作るための方法について考えていきます。]]></description>
+            <link>https://dorarep.page/articles/pointed-out</link>
+            <guid isPermaLink="false">pointed-out</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Tue, 23 Mar 2021 05:58:28 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[そのマイクロサービスは正解なのか？]]></title>
             <description><![CDATA[どのようなときにマイクロサービス化を進めれば良いのか、判断基準をまとめていきます。]]></description>
@@ -112,7 +120,7 @@
         </item>
         <item>
             <title><![CDATA[DDDは結局、なにを実現したいのか]]></title>
-            <description><![CDATA[最近は「文系エンジニアが◯◯」などの記事がよく注目を集めます。プログラミングにおける文系と理系の差を考えてみたいと思います。]]></description>
+            <description><![CDATA[そもそもDDDは何を実現したいのかという点からまとめていきます。]]></description>
             <link>https://dorarep.page/articles/ddd</link>
             <guid isPermaLink="false">ddd</guid>
             <dc:creator><![CDATA[dorarep]]></dc:creator>
