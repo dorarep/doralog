@@ -1,5 +1,15 @@
 [
   {
+    "title": "コーディング規約は本当に必要なのか",
+    "description": "コーディング規約の是非について考えていきます。",
+    "created": 1630895311596,
+    "tags": [
+      "コーディング"
+    ],
+    "thumbnail": "https://untraten.sirv.com/thumbnails/coding-standard.png",
+    "slug": "coding-standard"
+  },
+  {
     "title": "指摘をしても心理的安全性が乱れない環境は？",
     "description": "気兼ねなく指摘できる環境を作るための方法について考えていきます。",
     "created": 1616479108003,
