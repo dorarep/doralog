@@ -94,7 +94,7 @@ IT業界において、機能をいかに素早くリリースするかは非常
 const hasCompany = !!context?.user?.company
 ```
 
-他が`if`で、`?.`を使わず存在確認をしているため、次のように修正しろとのことです。
+他が`if`で、Optional Chainingを使わず存在確認をしているため、次のように修正しろとのことです。
 
 ```ts
 let hasCompany: boolean;
