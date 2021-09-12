@@ -4,8 +4,16 @@
         <description><![CDATA[doralog]]></description>
         <link>https://dorarep.page</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 06 Sep 2021 02:39:36 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 12 Sep 2021 08:01:59 GMT</lastBuildDate>
         <atom:link href="https://dorarep.page/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Nest.jsのDIと未来を考える]]></title>
+            <description><![CDATA[この記事では、NestのDIの仕組みを考察し、そこから技術選択としてのNestを考えてきます。]]></description>
+            <link>https://dorarep.page/articles/nest</link>
+            <guid isPermaLink="false">nest</guid>
+            <dc:creator><![CDATA[dorarep]]></dc:creator>
+            <pubDate>Sun, 12 Sep 2021 06:58:01 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[コーディング規約は本当に必要なのか]]></title>
             <description><![CDATA[コーディング規約の是非について考えていきます。]]></description>

@@ -1,0 +1,318 @@
+---
+title: Nest.jsのDIと未来を考える
+description: この記事では、NestのDIの仕組みを考察し、そこから技術選択としてのNestを考えてきます。
+created: 1631429881258
+tags: [バックエンド, TypeScript, JavaScript, Node.js]
+thumbnail: https://untraten.sirv.com/thumbnails/nest.png
+---
+
+最近はバックエンドにNest.jsが選ばれることが増えてきました。
+
+そのNest.jsの動作の根幹にあるのはDI(Dependency Injection)であり、Nest.jsでコーディングするにあたり意識せざるを得ない点です。
+
+しかしNest.jsにおけるDIが自分の認識してるDIと異なっており、ドキュメントを読みながら考えさせられる点が多くありました。
+
+この記事では、NestのDIの仕組みを考察し、そこから技術選択としてのNestを考えてきます。
+
+# DIとDIP
+
+まず自分の認識だと、DIの主たる目的はDIPでした。
+
+DIPは、具体への依存を抽象への依存に差し替えることで、交換可能性を上げるというものです。
+
+たとえば`IUserRepository`を定義し、それをImplementした`MySQLUserRepository`、`MemoryUserRepository`を用意し、テストの時は`MemoryUserRepository`を注入するなどがよくある用法です。
+
+同じように同じインターフェースで`FirestoreUserRepository`を用意すれば、動作が壊れることなくDBの差し替えも行うことができます。
+
+「現実問題差し替えることはあるのか」「実装を複雑にするほどのリターンはあるのか」みたいな議論はあるものの、DIを技術選択する理由としては主たるものではないでしょうか。
+
+## Nest.jsにおけるDIP
+
+さて、Nest.jsにおけるDIはどうかというと、基本的に『具体』を指定します。
+
+`UsersService`を注入すると記載されている場合、それは`UsersService`以外を想定していません。
+
+```ts
+import UsersService from 'users.service'
+...
+  constructor(private usersService: UsersService) {}
+```
+
+もちろん差し替え可能ではありますが、それはあくまで抜け道的に用意されたものです。インターフェースの異なるクラスを注入することもできるため、差し替えによる安全性は全く担保されていません。
+
+つまり、Nest.jsにおける差し替えはMockと変わりません。
+
+事実として[Nest.jsのテストのサンプルではMockを使っています](https://docs.nestjs.com/fundamentals/testing#unit-testing)。
+
+```ts
+  describe('findAll', () => {
+    it('should return an array of cats', async () => {
+      const result = ['test'];
+      jest.spyOn(catsService, 'findAll').mockImplementation(() => result);
+
+      expect(await catsController.findAll()).toBe(result);
+    });
+  });
+```
+
+もちろん[テスト用のServiceを用意し差し替える方法を選択している記事](https://blog.logrocket.com/unit-testing-nestjs-applications-with-jest/)も存在ますが、少なくともNest公式においてDIPがDIを技術選択した主たる要因ではないことが推察されます。
+
+# Nest.jsにおけるDIとは何なのか
+
+ではNest.jsは何のためにDIしているのでしょうか。
+
+それは、インスタンスのライフサイクルをNest.jsが管理することだと推察します。
+
+## スコープを制限できる
+
+Nest.jsの現場でよく耳にするトラブルが「Serviceが`undefined`になる」「なぜかテストだとDIされない」といったものです。
+
+これはNest.jsにおいて、DIは注入可能なクラスを制限することが主たる目的の１つだから起こるものです。
+
+### モジュールとスコープ
+
+Nest.jsでは、モジュール単位で注入可能なクラスを指定することができます。
+
+そしてモジュール単位でimportするクラス、exportするクラスを指定することができます。
+
+```ts
+@Module({
+  controllers: [UsersController],
+  providers: [UsersService, UserRoleGuard],
+  exports: [UserRoleGuard]
+})
+export class UsersModule {}
+
+@Module({
+  controllers: [CompaniesController],
+  providers: [CompaniesService],
+  imports: [UsersModule]
+})
+export class CompaniesModule {}
+```
+
+たとえば上記において、CompaniesModule内ではUserRoleGuardのみ注入可能です。
+
+UserRoleGuardがUsersServiceを利用していたとしても、それをCompaniesModuleから利用することはできません。
+
+つまりUsersModuleとしてはUserRoleGuardの動作のみ保証すれば良く、UsersServiceの変更が他のモジュールを壊すことを意識しなくて良くなるわけです。
+
+JavaScriptはexport先を制限することができないため、NestはDIを用いて擬似的にimport可能な範囲を制限しているといえます。
+
+### Nest.jsのファイル配置
+
+上記の前提に立ってNest.jsのファイル配置を見ると、納得できるものがあります。
+
+Nestは基本的にモジュールの中に雑多にさまざまな種類のファイルが置かれます。
+
+```
+- users
+  - users.controller.spec.ts
+  - users.controller.ts
+  - users.module.ts
+  - users.service.ts
+```
+
+Railsのようなフレームワークを使っている場合、`/controllers`、`/modules`、`/service`といった具合にディレクトリ配置されるため、自分はこれに違和感を覚えました。
+
+しかしこれがスコープを表していると考えると納得感があります。
+
+moduleは基本的に外部から独立した概念であり、その外から直接`import`されないことを意味しています。
+
+その前提を踏まえると、Nest.jsにおいてトップレベルではmoduleという単位でディレクトリ配置がなされ、module同士は`imports`、`exports`の指定でのみ連携するのが綺麗な設計になると考えられます。
+
+### スコープの抜け道
+
+とはいえ、これは外部からの`import`を完全に防ぐものではありません。
+
+先程の例だと、`UserRoleGuard`を`export`せず`providers`に指定してしまえば、どこからでも利用することはできます。
+
+ただ動くものを作るだけであれば、`imports`や`exports`は必要はありません。
+
+つまりあくまでチーム全体がこの前提を持った上で守っていかなければ、破綻する概念だということです。
+
+そうなると、Nest.jsにおけるDIはめんどくさい上にたまに`undefined`になる不安定なだけな機能に成り下がってしまうかもしれません。
+
+### スコープを守る方法
+
+スコープを制御するだけであれば、複数packageに分けるような方法もあります。
+
+uhyoさんの[eslint-plugin-import-access](https://github.com/uhyo/eslint-plugin-import-access)などで制限する方法もあります。
+
+スコープの制御はNest.jsの提供する機能の１つであれど、それはNest.jsを技術選択する主目的にはなり得ないと感じました。
+
+## インスタンスのライフサイクルを制御できる
+
+さて、２つ目がインスタンスのライフサイクルを制御できるという点です。
+
+たとえばNest.jsには『Injection Scope』という概念があります。
+
+これにより、シングルトンとして常に同じインスタンスを使い回すか、リクエストごとにインスタンスを生成するかの選択などが可能です。
+
+また循環参照の問題を解決したり、`onModuleDestroy`などのフックを定義することでそれぞれのライフサイクルに対応した処理を定義することができます。
+
+これはNode.jsでシングルスレッドにクラスを取り扱うにあたり、重要な機能でしょう。
+
+### そもそもなぜクラスなのか
+
+これらの機能を見て、個人的に疑問に感じたのはそもそも関数をクラス内に定義する必要はあるのかという点です。
+
+JavaScriptはトップレベルに関数を定義して、それを直接利用する方が一般的です。
+
+```js
+export const getUser = (userId: string) => userRepository.get(userId)
+```
+
+クラスにしなければインスタンス生成に複雑性を持たせる必要もなく、単体テストも容易です。
+
+事実としてReactはclassベースの定義は廃れfunctionベースが中心になりました。
+
+なぜあえてNest.jsはクラスを前提にしているのでしょうか。
+
+### 状態がコントロールしやすい
+
+クラスと関数の違いに、まず状態のコントロールしやすい点があります。
+
+たとえば関数でもトップレベルにおいた変数を操作すれば状態を持つことはできます。
+
+```ts
+let users: Record<string, User> = {}
+
+export async function getUser(userId: string): User {
+  if (users[userId]) {
+    return users[userId]
+  }
+  users[userId] = await userRepository.get(userId)
+  return user
+}
+```
+
+一方でクラスのメンバ変数として持たされた状態は、Nest.jsがコントロールしやすいものとなります。
+
+たとえばリクエストごとに異なるインスタンスを生成すればリクエストごとに異なる状態を持たせることができます。
+
+また、Nestの終了のタイミングでそれぞれの状態も安全に破棄することができます。
+
+とはいえ、あくまでこれらのメリットはあくまで状態を持つこと前提のものです。
+
+一般的にプログラミングにおいて状態は好まれません。`UserService`は、メンバ変数を使うことなく関数の列挙になるのが一般的ではないでしょうか？
+
+あくまで最適化のための手段であり、このメリットが活きるのはDBのセッションの使い回しなど限定的な用途に限られるかと思われます。
+
+### Serverlessとの相性
+
+状態を持たせるということは、つまり『使い回せるものは使い回す』ためです。
+
+破棄が前提のServerlessでは、このメリットは薄くなってきます。
+
+公式のServerlessのドキュメントでは「そこまで遅くならない」と弁明していますが、それでもパフォーマンス面で無駄が発生するのも事実であり、Nest.jsが与えるメリットも薄いと考えられます。
+
+### Decoratorを使うため
+
+クラスを使う２つ目の理由として、Decoratorが考えられます。
+
+ちゃんと使ったのは初めてですが確かにめちゃくちゃ便利で、これを軸にしたフレームワークを作りたくなる理由もわかります。
+
+### Nest.jsのDecoratorを使わないとき
+
+Controller層は基本的にNest.jsの提供するDecoratorが活躍します。
+
+一方でたとえばService層はDecoratorはあまり使われることがありません。このような場合は、もしかしたら関数で定義する選択肢はあるかもしれません。
+
+もちろん、Serviceをクラスで定義することはPrismaServiceを注入し使いまわせるという意義があります。状態を持つServiceへ依存している限り、Nestの軸から外れることは難しいです。
+
+たとえばtypegraphqlと併用する場合、そもそもNestのDecoratorを全く使わなずtypegraphqlの世界観に染まることとなります。
+
+このような場合は、Nest.jsを技術選択する意義は薄くなってきてしまうかもしれません。
+
+# 選択肢としてのNest.js
+
+Nest.jsのDIについて考察したところで、Nest.js自体について考えていきます。
+
+## Nest.jsへの依存
+
+Nest.jsを上手く使えばModule同士が疎結合になり、確かにテスタビリティや拡張性は向上するかもしれません。
+
+一方でNest.jsを正しく使うということは、オブジェクトのライフサイクルを完全にNest.jsに握らせるということでもあります。
+
+つまりあらゆるクラスは、Nest.jsなしに生成することができなくなるわけです。Nest.jsがないと子供が産めない身体にされてしまうのです。
+
+### ユニットテストの複雑性
+
+必然的にユニットテストも複雑になります。
+
+たとえばただの関数であれば以下のようにかけるシンプルな関数があるとしましょう。
+
+```ts
+describe("exists", () => {
+  it("returns true if user exists", () => {
+    expect(exists(userId)).toBeTrue()
+  })
+})
+```
+
+これがNest.jsのService上のメソッドだと、Nest.jsに初期化をしてもらう必要があります。
+
+
+```ts
+describe("UserService", () => {
+  service: UserService
+
+  beforeAll(async () => {
+    const module = await Test.createTestingModule({
+      providers: [UserService, PrismaService],
+    }).compile()
+    service = module.get<WorkspaceService>(WorkspaceService)
+  })
+
+  describe("exists", () => {
+    it("returns true if user exists", () => {
+      expect(service.exists(userId)).toBeTrue()
+    })
+  })
+})
+```
+
+このときprovidersの渡し方やSCOPEにより、[「なぜかundefinedになってテストがこける」ということ](https://qiita.com/motchi0214/items/bd5df25319a31d1f6d89)もあります。
+
+単純な関数であってもNest.jsについての知識が必要となり、時間が取られてしまったり、「よくわからないテストを書かない」となってしまうかもしれません。
+
+### 「フレームワークと結婚するな」
+
+Clean Architectureの「フレームワークは詳細」の項目には、「フレームワークと結婚するな」という格言が記載されています。
+
+Nest.jsを技術選択することは、まさにフレームワークと結婚することとなります。
+
+基本的に全てのクラスはNest.jsがなくては動作せず、ユニットテストすら単体で実行することはできません。
+
+仮にNest.jsをやめる場合、移行先がTypeScriptであってもほぼ全てのコードを書き直すことになり得るのです。
+
+### Nest.jsの未来
+
+TypeScript界隈は今後どのように変化していくかわかりません。
+
+たとえばvitaやesbuildなど、ビルドツールは今変化の過渡期にあります。
+
+もしかしたらDenoが中心になっていくかもしれませんし、そもそもReScriptのようなAltJSが主流になる可能性もあります。
+
+フロントエンドがWASMでJavaScriptから解放され、そもそもAltJS自体が廃れる可能性もあります。
+
+Nest.js自体はいま注目されていますが、反対にやっと導入され始めた時期でもあります。
+
+つまり今後使ってみての振り返りが起こる時期であり、そこでどのような評価になるかはわかりません。
+
+また新しいTypeScriptのフレームワークがでて一気にトレンドが変わる可能性があります。
+
+Nest.jsを技術選択する場合、これらのリスクに対する覚悟は必要になるでしょう。
+
+# 総括
+
+Nest.js自体は面白い思想で、使いこなせば非常に優秀なフレームワークになりそうです。
+
+特にModuleの独立性や再利用性の高さは非常に優秀で、公開されているmoduleが増えればどんどん便利になるでしょう。
+
+一方でRailsのようにただサンプル通り書けば生産性が上がるようなものでなく、使い方次第では生産性を落とす要因にもなり得るように見えます。
+
+これを踏まえると振り返りとして「微妙だった」と感じる人がいてもおかしくないのではないかと感じます。
+
+個人としては`@nestjs/microservices`など触ってみたいは思いますが、企業が全体重をあずけるには心許ないというのが結論です。

@@ -1,5 +1,18 @@
 [
   {
+    "title": "Nest.jsのDIと未来を考える",
+    "description": "この記事では、NestのDIの仕組みを考察し、そこから技術選択としてのNestを考えてきます。",
+    "created": 1631429881258,
+    "tags": [
+      "バックエンド",
+      "TypeScript",
+      "JavaScript",
+      "Node.js"
+    ],
+    "thumbnail": "https://untraten.sirv.com/thumbnails/nest.png",
+    "slug": "nest"
+  },
+  {
     "title": "コーディング規約は本当に必要なのか",
     "description": "コーディング規約の是非について考えていきます。",
     "created": 1630895311596,
