@@ -1,5 +1,11 @@
 [
   {
+    "date": "Mon Sep 13 11:58:51 2021 +0900",
+    "hash": "ac2408b",
+    "author": "dorarep",
+    "message": "fix: fix article"
+  },
+  {
     "date": "Mon Nov 16 00:37:30 2020 +0900",
     "hash": "d9a27e9",
     "author": "dorarep",
